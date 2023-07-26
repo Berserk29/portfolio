@@ -1,3 +1,10 @@
+:root {
+  /* TODO CHANGE TRACK AND THUMB WHEN DESIGN IS OVER */
+  --color-scroll-track: #F5F5F5;
+  --color-scroll-thumb: #555;
+  --color-scroll-thumb-hover: #747373;
+}
+
 *,
 *::after,
 *::before {
@@ -8,4 +15,30 @@
 
 html {
   font-size: 62.5%;
+
+  /* For Firefox  2 color -> [ thumb , track ]*/
+  scrollbar-color: var(--color-scroll-thumb) var(--color-scroll-track);
+}
+
+
+/* vw --> if zoom in are out stay same ratio */
+body::-webkit-scrollbar {
+  width: 1.2rem;
+	background-color: var(--color-scroll-track);
+}
+
+body::-webkit-scrollbar-track {
+	background-color: var(--color-scroll-track);
+  /* margin: 3px 0; */
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--color-scroll-thumb);
+  /* border-radius: 10px; */
+  border-left: 1.5px solid var(--color-scroll-track);
+  border-right: 1.5px solid var(--color-scroll-track);
+}
+
+body::-webkit-scrollbar-thumb:hover{
+  background-color: var(--color-scroll-thumb-hover);
 }
