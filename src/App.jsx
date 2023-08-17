@@ -1,12 +1,19 @@
 import HorizontalSection from "./component/horizontalSection/horizontalSection.component"
 
-import { Container } from "./App.style"
+import { Container, LoadingImg } from "./App.style"
+import LoadingPage from "./component/loadingPage/loadingPage.component"
+import { loadingImg } from "./component/loadingPage/loadingPage.data"
+
 
 function App() {
 
   return (
     <div >
-        <Container color="red"/>
+        <LoadingPage/>
+        {/* <Container color='var(--color-primary)'>
+          <LoadingImg src={loadingImg}/>
+        </Container> */}
+
         <Container color="turquoise"/>
 
         <HorizontalSection />
