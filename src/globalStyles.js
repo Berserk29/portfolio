@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import newyorkRegular from './assets/font/newyork-bold-webfont.woff2'
+import newyorkRegular from './assets/font/newyork-regular-webfont.woff2'
 import newyorkMedium from './assets/font/newyork-medium-webfont.woff2'
 import newyorkBold from './assets/font/newyork-bold-webfont.woff2'
 import newyorkBlack from './assets/font/newyork-black-webfont.woff2'

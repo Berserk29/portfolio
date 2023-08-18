@@ -1,4 +1,4 @@
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 import { pictureAni, circleAni } from "../../helper/keyframe";
 
 export const Container = styled.div`
@@ -25,10 +25,11 @@ export const AnimationContainer = styled.div`
 `
 
 export const ContainerBelow = styled.div`
+    position: relative;
     height: 100vh;
     width: 100%;
-    overflow: auto;
-    background-color: ${props => props.emptyColor ? 'none' : 'var(--color-primary)' };
+    overflow: hidden;
+    background-color: ${props => props.changeColor ? 'var(--color-cream)' : 'var(--color-primary)' };
     font-size: 10rem;
     display: flex;
     justify-content: center;
@@ -42,4 +43,11 @@ export const HeaderImg = styled.img`
     animation: ${pictureAni} 2s forwards;
     animation-delay: 1.5s;
     z-index: 2;
+`
+
+export const NameContainer = styled.div`
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%);
 `

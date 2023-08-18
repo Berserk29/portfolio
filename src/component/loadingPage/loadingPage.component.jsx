@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
-import { Container, HeaderImg, AnimationContainer, ContainerBelow} from "./loadingPage.styled";
+
+import { Container, HeaderImg, AnimationContainer, ContainerBelow, NameContainer} from "./loadingPage.styled";
 import { loadingImg } from "./loadingPage.data";
+
 import InfiniteText from "../infiniteText/infiniteText.component";
+import Typo, { TypoType } from "../typo/typo.component";
 
 const LoadingPage = () => {
     const [animationOn, setAnimationOn] = useState(false)
@@ -21,7 +24,8 @@ const LoadingPage = () => {
                 <AnimationContainer/>
             </Container>
             }
-            <ContainerBelow emptyColor={animationOn}>
+            <ContainerBelow changeColor={animationOn}>
+                <NameContainer><Typo type={TypoType.Headline3B}>Olivier</Typo></NameContainer>
                 <HeaderImg src={loadingImg} endAni={endAnimation}/>
                 <InfiniteText />
             </ContainerBelow>

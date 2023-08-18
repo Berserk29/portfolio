@@ -1,19 +1,20 @@
+import { useEffect } from "react"
+
 import HorizontalSection from "./component/horizontalSection/horizontalSection.component"
-
-import { Container, LoadingImg } from "./App.style"
+import { Container } from "./App.style"
 import LoadingPage from "./component/loadingPage/loadingPage.component"
-import { loadingImg } from "./component/loadingPage/loadingPage.data"
-
+import PageOne from "./component/pageOne/pageOne.component"
 
 function App() {
+  // INFO MAKE THE REFRESH COMEBACK TO THE BEGINNING
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  },[])
 
   return (
     <div >
         <LoadingPage/>
-        {/* <Container color='var(--color-primary)'>
-          <LoadingImg src={loadingImg}/>
-        </Container> */}
-
+        <PageOne/>
         <Container color="turquoise"/>
 
         <HorizontalSection />
