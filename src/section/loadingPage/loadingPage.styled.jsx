@@ -45,9 +45,5 @@ export const HeaderImg = styled.img`
     z-index: 2;
 `
 
-export const NameContainer = styled.div`
-    position: absolute;
-    top: 5vh;
-    left: 50%;
-    transform: translate(-50%);
-`
+
+
