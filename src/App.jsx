@@ -1,9 +1,9 @@
 import { useEffect } from "react"
 
-import HorizontalSection from "./component/horizontalSection/horizontalSection.component"
+import HorizontalSection from './section/horizontalSection/horizontalSection.component'
 import { Container } from "./App.style"
-import LoadingPage from "./component/loadingPage/loadingPage.component"
-import PageOne from "./component/pageOne/pageOne.component"
+import LoadingPage from "./section/loadingPage/loadingPage.component"
+import PageOne from "./section/pageOne/pageOne.component"
 
 function App() {
   // INFO MAKE THE REFRESH COMEBACK TO THE BEGINNING

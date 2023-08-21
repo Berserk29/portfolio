@@ -1,4 +1,4 @@
-import { TypoType } from "../typo/typo.component"
+import { TypoType } from "../../component/typo/typo.component"
 
 
 export const pageOneTextArr = [

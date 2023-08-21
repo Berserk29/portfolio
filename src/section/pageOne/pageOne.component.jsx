@@ -1,6 +1,6 @@
 import { Container } from "./pageOne.styled"
 import { pageOneTextArr } from "./pageOne.data";
-import MovingText from "../movingText/movingText.component";
+import MovingText from '../../component/movingText/movingText.component'
 
 const PageOne = () => {
     return (

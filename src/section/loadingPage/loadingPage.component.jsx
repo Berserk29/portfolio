@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { Container, HeaderImg, AnimationContainer, ContainerBelow, NameContainer} from "./loadingPage.styled";
 import { loadingImg } from "./loadingPage.data";
 
-import InfiniteText from "../infiniteText/infiniteText.component";
-import Typo, { TypoType } from "../typo/typo.component";
+import InfiniteText from '../../component/infiniteText/infiniteText.component'
+import Typo, { TypoType } from "../../component/typo/typo.component";
 
 const LoadingPage = () => {
     const [animationOn, setAnimationOn] = useState(false)
