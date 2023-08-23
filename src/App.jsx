@@ -12,15 +12,15 @@ function App() {
   },[])
 
   return (
-    <div >
-        <LoadingPage/>
-        <PageOne/>
-        <Container color="turquoise"/>
+    <>
+      <LoadingPage/>
+      <PageOne/>
+      <Container color="turquoise"/>
 
-        <HorizontalSection />
+      <HorizontalSection />
 
-        <Container color="purple"/>
-    </div>
+      <Container color="purple"/>
+    </>
   )
 }
 export default App

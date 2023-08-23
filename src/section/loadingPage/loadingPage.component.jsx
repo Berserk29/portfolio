@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 import { 
     Container,
@@ -8,12 +9,11 @@ import {
 } from "./loadingPage.styled";
 import { loadingImg } from "./loadingPage.data";
 
-import InfiniteText from '../../component/infiniteText/infiniteText.component'
-import Typo, { TypoType } from "../../component/typo/typo.component";
 import LoadingName from "../../component/loadingName/loadingName.component";
 import Marquee from "../../component/marquee/marquee.component";
 
 const LoadingPage = () => {
+    const {ref, inView} = useInView()
     const [animationOn, setAnimationOn] = useState(false)
     const [endAnimation, setEndAnimation] = useState(false)
     
@@ -31,11 +31,10 @@ const LoadingPage = () => {
                     <AnimationContainer/>
                 </Container>
             }
-            <ContainerBelow changeColor={animationOn}>
+            <ContainerBelow changeColor={animationOn} ref={ref}>
                 <LoadingName />
                 <HeaderImg src={loadingImg} endAni={endAnimation}/>
-                <InfiniteText />
-                {/* <Marquee /> */}
+                { inView && <Marquee endAni={endAnimation}/>}
             </ContainerBelow>
         </>
     )

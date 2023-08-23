@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { pictureAni, circleAni } from "../../helper/keyframe";
 
-export const Container = styled.div`
+export const Container = styled.section`
     position: fixed;
     top: 0;
     left: 0;
@@ -24,7 +24,7 @@ export const AnimationContainer = styled.div`
     animation-delay: 1.5s;
 `
 
-export const ContainerBelow = styled.div`
+export const ContainerBelow = styled.header`
     position: relative;
     height: 100vh;
     width: 100%;

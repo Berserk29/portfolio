@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section`
     height: 105vh;
     width: 100vw;
     /* width: 100rem; */
@@ -22,7 +22,7 @@ export const Sticky = styled.div`
     height: 105vh;
 `
 
-export const ScrollSection = styled.div`
+export const ScrollSection = styled.section`
     position: absolute;
     top: 0;
     height: 100%;

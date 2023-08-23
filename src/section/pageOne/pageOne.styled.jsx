@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section`
     height: auto;
     width: 100%;
     background-color: var(--color-primary);
