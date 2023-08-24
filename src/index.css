@@ -4,6 +4,10 @@
   --color-cream-opa50: rgba(245, 241, 234, .5);
   --color-cream-opa10: rgba(245, 241, 234, .1);
   
+  --bg-gradiant-1: linear-gradient(180deg, #F5F1EA 34.38%, rgba(245, 241, 234, 0.10) 75.52%, rgba(245, 241, 234, 0.00) 99.98%, rgba(102, 102, 102, 0.00) 99.99%, rgba(245, 241, 234, 0.00) 100%);
+
+  
+
   --box-shadow-start:
   0 0 0 160px var(--color-primary),
   0 0 0 165px var(--color-cream),

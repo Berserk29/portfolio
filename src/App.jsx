@@ -4,6 +4,7 @@ import HorizontalSection from './section/horizontalSection/horizontalSection.com
 import { Container } from "./App.style"
 import LoadingPage from "./section/loadingPage/loadingPage.component"
 import PageOne from "./section/pageOne/pageOne.component"
+import PageTwo from "./section/pageTwo/pageTwo.component"
 
 function App() {
   // INFO MAKE THE REFRESH COMEBACK TO THE BEGINNING
@@ -15,7 +16,7 @@ function App() {
     <>
       <LoadingPage/>
       <PageOne/>
-      <Container color="turquoise"/>
+      <PageTwo/>
 
       <HorizontalSection />
 

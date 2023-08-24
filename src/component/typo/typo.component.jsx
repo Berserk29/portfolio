@@ -1,6 +1,7 @@
 import * as Styled from './typo.styled'
 
 export const TypoType = {
+    GiantHeadline: 'GiantHeadline',
     Headline1B: 'Headline1B',
     Headline1T: 'Headline1T',
     Headline2W: 'Headline2W',

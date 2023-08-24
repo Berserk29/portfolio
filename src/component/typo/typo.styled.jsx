@@ -10,12 +10,25 @@ const NewYorkBold = css`
     font-family: 'New York';
     font-weight: 700;
 `
+const NewYorkMedium = css`
+    font-family: 'New York';
+    font-weight: 500;
+`
 const NewYorkRegular = css`
     font-family: 'New York';
     font-weight: 400;
 `
 
 // INFO STYLED COMPONENT
+
+// TODO WHEN THE FONT-FAMILY WILL CHANGE PROBABLY NEED TO CHANGE FEW STUFF LIKE LINE-HEIGHT
+export const GiantHeadline = styled.span`
+    ${NewYorkMedium}
+    display: inline-block;
+    font-size: 45rem;
+    line-height: 35rem;
+`
+
 export const Headline1B = styled.h1`
     ${NewYorkBlack}
     line-height: 110%;

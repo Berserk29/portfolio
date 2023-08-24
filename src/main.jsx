@@ -4,12 +4,16 @@ import App from './App'
 import './index.css'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import GlobalStyles from './globalStyles'
+import { ErrorBoundary } from 'react-error-boundary'
+import ErrorPage from './section/errorPage/errorPage.component'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GlobalStyles />
-    <ParallaxProvider>
-      <App />
-    </ParallaxProvider>
+    <ErrorBoundary FallbackComponent={ErrorPage}>
+      <GlobalStyles />
+      <ParallaxProvider>
+        <App />
+      </ParallaxProvider>
+    </ErrorBoundary>
   </React.StrictMode>
 )

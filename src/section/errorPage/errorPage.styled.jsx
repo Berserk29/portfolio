@@ -1,6 +1,11 @@
 import styled, {css} from "styled-components";
 
-export const Container = styled.div`
+const style = css`
+    font-weight: 700;
+    color: white;
+`
+
+export const Container = styled.section`
     display: flex;
     height: 100vh;
     min-height: 80rem;
@@ -10,12 +15,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-image: url(${props => props.image});
-`
-
-const style = css`
-    font-weight: 700;
-    color: white;
 `
 
 export const Heading = styled.h2`

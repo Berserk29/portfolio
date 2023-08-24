@@ -11,7 +11,7 @@ const Marquee = ({endAni}) => {
 
 
     useEffect(() => {
-        
+
         // INFO (debounce) if the difference betweeen scroll is greater than 150ms --> resetAnimation
         const resetAnimation = () => setAnimationSpeed(0.3)
         const debouncedAnimation = debounce(resetAnimation, 150);
@@ -21,14 +21,14 @@ const Marquee = ({endAni}) => {
             debouncedAnimation();
         }
 
-        //INFO (throttle) call each handleScroll with a interval of 100ms --> limited the number of scroll envent 
+        // INFO (throttle) call each handleScroll with a interval of 100ms --> limited the number of scroll envent 
         window.addEventListener('scroll', throttle(handleScroll, 100))
         return () => window.removeEventListener('scroll', handleScroll) 
     },[])
 
-
+    
     useEffect(() => {
-        !endAni ? setAnimationSpeed(15) : setAnimationSpeed(0.5)
+        !endAni ? setAnimationSpeed(15) : setAnimationSpeed(0.3)
     }, [endAni])
 
     return (
