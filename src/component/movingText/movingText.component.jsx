@@ -6,6 +6,8 @@ import { TextContainer } from "./movingText.styled"
 
 import Typo from "../typo/typo.component"
 
+// TODO WILL MAYBE DELETED... 
+
 const MovingText = ({props}) => {
     const {type, text, duration, isBorderTop, isBorderBottom, threshold} = props
     const control = useAnimation()

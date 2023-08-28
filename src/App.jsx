@@ -1,12 +1,14 @@
 import { useEffect } from "react"
 
-import HorizontalSection from './section/horizontalSection/horizontalSection.component'
-import { Container } from "./App.style"
-import LoadingPage from "./section/loadingPage/loadingPage.component"
-import PageOne from "./section/pageOne/pageOne.component"
-import PageTwo from "./section/pageTwo/pageTwo.component"
+import Header from "./section/header/header.component"
+import AboutSection from "./section/aboutSection/aboutSection.component"
+import ProjectSection from "./section/projectSection/projectSection.component"
+import SkillSection from "./section/skillSection/skillSection.component"
+import EmailSection from "./section/emailSection/emailSection.component"
+import Footer from "./section/footer/footer.component"
 
 function App() {
+  
   // INFO MAKE THE REFRESH COMEBACK TO THE BEGINNING
   useEffect(() => {
     window.history.scrollRestoration = 'manual'
@@ -14,13 +16,12 @@ function App() {
 
   return (
     <>
-      <LoadingPage/>
-      <PageOne/>
-      <PageTwo/>
-
-      <HorizontalSection />
-
-      <Container color="purple"/>
+      <Header/>
+      <AboutSection />
+      <ProjectSection />
+      <SkillSection />
+      <EmailSection/>
+      <Footer />
     </>
   )
 }

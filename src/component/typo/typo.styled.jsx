@@ -1,67 +1,78 @@
 import styled, {css} from "styled-components";
 
 // INFO CSS
+const teko = css`
+    font-family: 'Teko';
+    color: ${props => props.color};
+    text-transform: uppercase;
+    display: inline-block;
+`
 
-const NewYorkBlack = css`
-    font-family: 'New York';
-    font-weight: 900;
-`
-const NewYorkBold = css`
-    font-family: 'New York';
+const khandBold = css`
+    font-family: 'Khand';
     font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 100%;
 `
-const NewYorkMedium = css`
-    font-family: 'New York';
-    font-weight: 500;
+
+const heebo = css`
+    font-family: 'Heebo';
+    color: ${props => props.color};
 `
-const NewYorkRegular = css`
-    font-family: 'New York';
-    font-weight: 400;
+
+const bebasNeue = css`
+    font-family: 'Bebas Neue';
+    color: ${props => props.color};
 `
 
 // INFO STYLED COMPONENT
 
-// TODO WHEN THE FONT-FAMILY WILL CHANGE PROBABLY NEED TO CHANGE FEW STUFF LIKE LINE-HEIGHT
-export const GiantHeadline = styled.span`
-    ${NewYorkMedium}
-    display: inline-block;
-    font-size: 45rem;
-    line-height: 35rem;
-`
-
 export const Headline1B = styled.h1`
-    ${NewYorkBlack}
-    line-height: 110%;
-    display: inline-block;
+    ${khandBold}
     font-size: 16rem;
     color: var(--color-primary);
-    text-transform: uppercase;
 `
 
 export const Headline1T = styled(Headline1B)`
-    ${NewYorkBlack}
+    ${khandBold}
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--color-primary);
 `
 
-export const Headline2W = styled.h2`
-    ${NewYorkRegular}
+export const Headline2 = styled.h2`
+    ${teko}
+    line-height: 90%;
+    font-weight: 600;
     font-size: 9.6rem;
-    color: var(--color-cream);
+`
+
+export const Headline3 = styled.h3`
+    ${teko}
+    font-weight: 600;
+    font-size: 5.6rem;
+`
+
+export const Headline4 = styled.h3`
+    ${teko}
+    font-weight: 500;
+    font-size: 5.6rem;
     line-height: 130%;
 `
 
-export const Headline3W = styled.h3`
-    ${NewYorkRegular}
-    font-size: 6.4rem;
-    color: var(--color-cream);
-    line-height: 130%;
+export const GiantHeadline = styled.span`
+    ${khandBold}
+    font-size: 24.8rem;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-cream);
 `
 
-export const Headline3B = styled.h3`
-    ${NewYorkBold}
-    font-size: 6.2rem;
-    color: var(--color-primary);
-    text-transform: uppercase;
+export const Text1 = styled.p`
+   ${heebo}
+   font-weight: 700;
+   font-size: 2.6rem;
+   line-height: 160%;
+   white-space: pre-line;
 `

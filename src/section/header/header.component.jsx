@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { 
+import {
     Container,
     HeaderImg,
     AnimationContainer,
     ContainerBelow,
-} from "./loadingPage.styled";
-import { loadingImg } from "./loadingPage.data";
+} from "./header.styled";
 
-import LoadingName from "../../component/loadingName/loadingName.component";
+import HeadingName from "../../component/headerName/headerName.component";
 import Marquee from "../../component/marquee/marquee.component";
+import headingImg from "../../assets/image/header_img.png"
 
-const LoadingPage = () => {
+
+const Header = () => {
     const {ref, inView} = useInView()
     const [animationOn, setAnimationOn] = useState(false)
     const [endAnimation, setEndAnimation] = useState(false)
@@ -26,18 +27,14 @@ const LoadingPage = () => {
 
     return (
         <> 
-            { !endAnimation &&
-                <Container>
-                    <AnimationContainer/>
-                </Container>
-            }
+            { !endAnimation && <Container><AnimationContainer/></Container> }
             <ContainerBelow changeColor={animationOn} ref={ref}>
-                <LoadingName />
-                <HeaderImg src={loadingImg} endAni={endAnimation}/>
+                <HeadingName />
+                <HeaderImg src={headingImg} endAni={endAnimation}/>
                 { inView && <Marquee endAni={endAnimation}/>}
             </ContainerBelow>
         </>
     )
 }
 
-export default LoadingPage;
+export default Header;

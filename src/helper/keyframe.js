@@ -44,10 +44,10 @@ export const circleAni = keyframes`
 `
 export const nameContainerAni = keyframes`
     0% {
-        transform: translateY(42vh) translateX(-50%) scale(1.5);
+        transform: translate(-50%, 42vh) scale(1.5);
     }
     100% {
-        transform: translateY(0) translate(-50%) scale(1);
+        transform: translate(-50%, 0) scale(1);
     }
 `
 

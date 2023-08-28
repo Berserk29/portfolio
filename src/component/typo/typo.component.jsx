@@ -4,16 +4,17 @@ export const TypoType = {
     GiantHeadline: 'GiantHeadline',
     Headline1B: 'Headline1B',
     Headline1T: 'Headline1T',
-    Headline2W: 'Headline2W',
-    Headline3B: 'Headline3B',
-    Headline3W: 'Headline3W',
+    Headline2: 'Headline2',
+    Headline3: 'Headline3',
+    Headline4: 'Headline4',
+    Text1: 'Text1',
 }
 
-const Typo = ({children, type}) => {
+const Typo = ({children, type, color = 'var(--color-primary)'}) => {
     const StyledComponent = Styled[TypoType[type]];
 
     return (
-        <StyledComponent>{children}</StyledComponent>
+        <StyledComponent color={color}>{children}</StyledComponent>
     )
 }
 

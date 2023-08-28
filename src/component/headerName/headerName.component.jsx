@@ -1,7 +1,7 @@
-import { NameContainer, RelativeSection, LetterSpan, LetterSpanAfter} from "./loadingName.styled";
-import { nameArr } from "./loadingName.data";
+import { NameContainer, RelativeSection, LetterSpan, LetterSpanAfter} from "./headerName.styled";
+import { nameArr } from "./headerName.data";
 
-const LoadingName = () => {
+const HeaderName = () => {
     return(
         <NameContainer>
             <RelativeSection>
@@ -16,4 +16,4 @@ const LoadingName = () => {
     )
 }
 
-export default LoadingName;
+export default HeaderName;
