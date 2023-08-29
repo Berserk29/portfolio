@@ -7,7 +7,10 @@ export const TypoType = {
     Headline2: 'Headline2',
     Headline3: 'Headline3',
     Headline4: 'Headline4',
+    Headline4P: 'Headline4P',
     Text1: 'Text1',
+    Text2: 'Text2',
+    Text3: 'Text3',
 }
 
 const Typo = ({children, type, color = 'var(--color-primary)'}) => {

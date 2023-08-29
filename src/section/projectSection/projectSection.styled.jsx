@@ -8,3 +8,10 @@ export const ProjectContainer = styled.section`
     padding: 14.5rem 14rem 16rem 14rem;
     background-color: var(--color-primary);
 `
+
+export const CardContainer = styled.div`
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 12rem;
+`

@@ -70,3 +70,13 @@ export const letterCircleAni = keyframes`
     from { background-color: white; }
     to { background-color: var(--color-primary); }
 `
+
+export const starAni = keyframes`
+    0%, 10% { opacity: 1}
+    15% { opacity: 0.5 }
+    25%,40% { opacity: 1 }
+    45% { opacity: 0.3 }
+    55%,80% { opacity: 1 }
+    85% { opacity: 0.2 }
+    90%,100% {opacity: 1}
+`

@@ -61,6 +61,10 @@ export const Headline4 = styled.h3`
     line-height: 130%;
 `
 
+export const Headline4P = styled(Headline4)`
+    line-height: 4rem;
+`
+
 export const GiantHeadline = styled.span`
     ${khandBold}
     font-size: 24.8rem;
@@ -75,4 +79,21 @@ export const Text1 = styled.p`
    font-size: 2.6rem;
    line-height: 160%;
    white-space: pre-line;
+`
+
+export const Text2 = styled.p`
+   ${heebo}
+   font-weight: 400;
+   font-size: 2.6rem;
+   line-height: 130%;
+   white-space: pre-line;
+`
+
+export const Text3 = styled.p`
+   ${teko}
+   font-weight: 300;
+   font-size: 2.4rem;
+   line-height: 100%;
+   white-space: pre-line;
+   text-transform: none;
 `
