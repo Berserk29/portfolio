@@ -7,17 +7,18 @@ import { marqueeArr } from "./marquee.data";
 import { debounce, throttle } from "../../helper/helperFunction";
 
 const Marquee = ({endAni}) => {
-    const [animationSpeed, setAnimationSpeed] = useState(0.3)
+    const initialSpeed = 0.4;
+    const [animationSpeed, setAnimationSpeed] = useState(initialSpeed)
 
 
     useEffect(() => {
 
         // INFO (debounce) if the difference betweeen scroll is greater than 150ms --> resetAnimation
-        const resetAnimation = () => setAnimationSpeed(0.3)
+        const resetAnimation = () => setAnimationSpeed(initialSpeed)
         const debouncedAnimation = debounce(resetAnimation, 150);
 
         const handleScroll = () => {
-            setAnimationSpeed(1.2)
+            setAnimationSpeed(1.5)
             debouncedAnimation();
         }
 
@@ -28,7 +29,7 @@ const Marquee = ({endAni}) => {
 
     
     useEffect(() => {
-        !endAni ? setAnimationSpeed(15) : setAnimationSpeed(0.3)
+        !endAni ? setAnimationSpeed(15) : setAnimationSpeed(initialSpeed)
     }, [endAni])
 
     return (

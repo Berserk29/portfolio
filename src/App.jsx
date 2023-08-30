@@ -11,7 +11,8 @@ function App() {
   
   // INFO MAKE THE REFRESH COMEBACK TO THE BEGINNING
   useEffect(() => {
-    window.history.scrollRestoration = 'manual'
+    window.history.scrollRestoration = 'manual';
+    window.focus();
   },[])
 
   return (

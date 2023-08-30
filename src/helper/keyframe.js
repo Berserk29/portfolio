@@ -80,3 +80,13 @@ export const starAni = keyframes`
     85% { opacity: 0.2 }
     90%,100% {opacity: 1}
 `
+
+export const infiniteAniBackward = keyframes`
+    from {transform: translateX(0)}
+    to {transform: translateX(-100%)}
+`
+
+export const infiniteAniForward = keyframes`
+    from {transform: translateX(0)}
+    to {transform: translateX(100%)}
+`
