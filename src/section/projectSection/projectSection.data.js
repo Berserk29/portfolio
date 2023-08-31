@@ -1,7 +1,7 @@
 import project1 from '../../assets/image/project_01.jpg'
 import project2 from '../../assets/image/project_02.jpg'
 
-// INFO { image, projectName, description, time, textMarqueeArr, isMarqueeForward }
+// INFO { image, projectName, description, time, textMarqueeArr, isMarqueeForward, link }
 
 export const projectCardArr = [
     {
@@ -11,6 +11,7 @@ export const projectCardArr = [
         time: 'mar-may 2023',
         textMarqueeArr: ['E-commerce', 'Responsive'],
         isMarqueeForward: false,
+        link: 'https://anc-project.netlify.app/',
     },
     {
         image: project2,
@@ -19,5 +20,6 @@ export const projectCardArr = [
         time: 'jan-mar 2023',
         textMarqueeArr: ['Business', 'Responsive'],
         isMarqueeForward: true,
+        link: 'https://continum.netlify.app/',
     },
 ]

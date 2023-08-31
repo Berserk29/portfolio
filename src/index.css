@@ -6,6 +6,7 @@
   
   --bg-gradiant-1: linear-gradient(180deg, #F5F1EA 34.38%, rgba(245, 241, 234, 0.10) 75.52%, rgba(245, 241, 234, 0.00) 99.98%, rgba(102, 102, 102, 0.00) 99.99%, rgba(245, 241, 234, 0.00) 100%);
 
+  --filter-primary: invert(46%) sepia(74%) saturate(312%) hue-rotate(166deg) brightness(96%) contrast(85%);
   
 
   --box-shadow-start:

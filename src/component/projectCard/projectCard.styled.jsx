@@ -62,13 +62,15 @@ export const FirstText = styled.div`
 
 // TESTING
 
-export const BtnContainer = styled.div`
-    position: absolute;
-    transition: transform .4s ease, opacity .2s ease-out, background-color .8s ease-out;
-    transform: translate(-50%, -50%);
+export const ArrowImg = styled.img`
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: filter .6s ease-out;
+`
+
+export const BtnContainer = styled.a`
+    transition: opacity .3s ease-out, background-color .6s ease-out;
     opacity: 0;
-    top: 50%;
-    left: 50%;
     background-color: var(--color-primary);
     width: 8rem;
     height: 8rem;
@@ -77,6 +79,10 @@ export const BtnContainer = styled.div`
     align-items: center;
     justify-content: center;
     :hover {
-        background-color: azure;
+        background-color: var(--color-cream);
+
+        ${ArrowImg}{
+            filter: var(--filter-primary)
+        }
     }
 `

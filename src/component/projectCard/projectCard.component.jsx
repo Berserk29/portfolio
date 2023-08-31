@@ -1,12 +1,22 @@
 import { useRef, useEffect } from "react";
-import { FlexContainer, Container, CardImg, TextContainer, FirstText, CardContainer, BtnContainer } from "./projectCard.styled";
+
+import { 
+    FlexContainer, 
+    Container, 
+    CardImg, 
+    TextContainer, 
+    FirstText, 
+    CardContainer, 
+    BtnContainer, 
+    ArrowImg
+} from "./projectCard.styled";
+
 import Typo, { TypoType } from '../typo/typo.component'
 import InfiniteText from "../infiniteText/infiniteText.component";
-import ArrowBtn from "../arrowBtn/arrowBtn.component";
-// import ArrowBtn from "../arrowBtn/arrowBtn.component";
+import arrowImg from '../../assets/icon/arrow.png'
 
 const ProjectCard = ({props, justify}) => {
-    const { image, projectName, description, time, textMarqueeArr, isMarqueeForward} = props;
+    const { image, projectName, description, time, textMarqueeArr, isMarqueeForward, link} = props;
     const cardRef = useRef(null)
     const btnRef = useRef(null)
     let cardCur;
@@ -50,7 +60,7 @@ const ProjectCard = ({props, justify}) => {
         }
 
         cardCur.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
-        btnCur.style.transform = `translate(-50%, -50%) rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(300px)`
+        // btnCur.style.transform = `translate(-50%, -50%) rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(100px)`
     }
 
     const enterHandler = () => {
@@ -64,10 +74,6 @@ const ProjectCard = ({props, justify}) => {
         btnCur.style.opacity = 0;
     }
 
-    const clickHandler = () => {
-        console.log('will open link!')
-    }
-
     return (
         <FlexContainer justify={justify}>
             <InfiniteText textArr={textMarqueeArr} isForward={isMarqueeForward} />
@@ -78,9 +84,10 @@ const ProjectCard = ({props, justify}) => {
                     onMouseLeave={leaveHandler}
                 >
                     <CardImg image={image} ref={cardRef} >
+                        <BtnContainer ref={btnRef} target="_blank" href={link}>
+                            <ArrowImg src={arrowImg} alt="arrow icon"/>
+                        </BtnContainer>
                     </CardImg>
-                        {/* TESTING BTN --> NEED TO PUT ARROW */}
-                        <BtnContainer ref={btnRef} onClick={clickHandler}/>
                 </CardContainer>
                 <TextContainer >
                     <FirstText>
