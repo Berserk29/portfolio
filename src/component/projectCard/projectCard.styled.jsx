@@ -5,7 +5,6 @@ export const FlexContainer = styled.div`
     justify-content: ${props => props.justify};
     align-items: center;
     width: 100%;
-    overflow: hidden;
 `
 
 export const Container = styled.div`
@@ -16,7 +15,6 @@ export const Container = styled.div`
     height: auto;
     z-index: 2;
 `
-
 
 export const CardContainer = styled.div`
     transform-style: preserve-3d;
@@ -59,8 +57,6 @@ export const FirstText = styled.div`
     align-items: flex-end;
     transform: translateZ(100px);
 `
-
-// TESTING
 
 export const ArrowImg = styled.img`
     width: 2.5rem;

@@ -7,4 +7,6 @@ export const SkillContainer = styled.section`
     gap: 10rem;
     padding: 14.5rem 14rem 16rem 14rem;
     background-color: var(--color-cream);
+    width: 100%;
+    height: auto;
 `

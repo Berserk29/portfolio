@@ -17,8 +17,8 @@ import arrowImg from '../../assets/icon/arrow.png'
 
 const ProjectCard = ({props, justify}) => {
     const { image, projectName, description, time, textMarqueeArr, isMarqueeForward, link} = props;
-    const cardRef = useRef(null)
-    const btnRef = useRef(null)
+    const cardRef = useRef()
+    const btnRef = useRef()
     let cardCur;
     let btnCur;
     

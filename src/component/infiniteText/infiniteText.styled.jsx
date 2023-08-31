@@ -10,6 +10,7 @@ export const FlexContainer = styled.div`
     user-select: none;
     display: flex;
     flex-direction: ${ props => props.isForward ? 'row-reverse' : 'row'};
+    overflow: hidden;
 `
 
 export const TextContainer = styled.div`

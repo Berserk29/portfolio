@@ -34,6 +34,7 @@ export const ContainerBelow = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 `
 
 export const HeaderImg = styled.img`
