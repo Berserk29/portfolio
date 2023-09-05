@@ -26,16 +26,17 @@ const ProjectCard = ({props, justify}) => {
     const rotationPower = 20;
 
     useEffect(() => {
-        cardCur = cardRef.current;
-        btnCur = btnRef.current;
+        cardCur = cardRef?.current;
+        btnCur = btnRef?.current;
     },[cardRef, btnRef])
  
 
     const moveHandler = (e) => {
+        if(!cardCur) return;
         const domRect = e.currentTarget.getBoundingClientRect();
-        const visibleX = (cardCur.clientWidth / 2 ) / rotationPower;
+        const visibleX = (cardCur?.clientWidth / 2 ) / rotationPower;
         const hiddenX = +((domRect.width / 2 ) / rotationPower - visibleX).toFixed(1);
-        const visibleY = (cardCur.clientHeight / 2 ) / rotationPower;
+        const visibleY = (cardCur?.clientHeight / 2 ) / rotationPower;
         const hiddenY = +((domRect.height / 2 ) / rotationPower - visibleY).toFixed(1);
 
         // MOUSE POSITION ON THE CARDCONTAINER --> THE MIDDLE PART WILL BE 0
@@ -60,15 +61,16 @@ const ProjectCard = ({props, justify}) => {
         }
 
         cardCur.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
-        // btnCur.style.transform = `translate(-50%, -50%) rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(100px)`
     }
 
     const enterHandler = () => {
+        if(!cardCur || !btnCur ) return;
         cardCur.style.transition = 'all 0.1s ease';
         btnCur.style.opacity = 1;
     }
 
     const leaveHandler = () => {
+        if(!cardCur || !btnCur ) return;
         cardCur.style.transition = 'all 0.4s ease'
         cardCur.style.transform = 'rotateY(0deg) rotateX(0deg)'
         btnCur.style.opacity = 0;

@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 import Header from "./section/header/header.component"
 import AboutSection from "./section/aboutSection/aboutSection.component"
@@ -8,7 +8,8 @@ import EmailSection from "./section/emailSection/emailSection.component"
 import Footer from "./section/footer/footer.component"
 
 function App() {
-  
+  const aboutRef = useRef()
+  const projectRef = useRef()
   // INFO MAKE THE REFRESH COMEBACK TO THE BEGINNING
   useEffect(() => {
     window.history.scrollRestoration = 'manual';
@@ -18,11 +19,11 @@ function App() {
   return (
     <>
       <Header/>
-      <AboutSection />
-      <ProjectSection />
+      <AboutSection ref={aboutRef}/>
+      <ProjectSection ref={projectRef}/>
       <SkillSection />
       <EmailSection/>
-      <Footer />
+      <Footer ref={[projectRef, aboutRef]}/>
     </>
   )
 }

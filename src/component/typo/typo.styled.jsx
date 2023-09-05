@@ -65,6 +65,12 @@ export const Headline4P = styled(Headline4)`
     line-height: 4rem;
 `
 
+export const Headline5 = styled.h4`
+    ${bebasNeue}
+    font-size: 4rem;
+    text-transform: uppercase;
+`
+
 export const GiantHeadline = styled.span`
     ${khandBold}
     font-size: 24.8rem;
@@ -85,7 +91,7 @@ export const Text2 = styled.p`
    ${heebo}
    font-weight: 400;
    font-size: 2.6rem;
-   line-height: 130%;
+   line-height: 160%;
    white-space: pre-line;
 `
 
@@ -96,4 +102,25 @@ export const Text3 = styled.p`
    line-height: 100%;
    white-space: pre-line;
    text-transform: none;
+`
+
+export const Text4 = styled.p`
+   ${heebo}
+   font-weight: 400;
+   font-size: 2.4rem;
+   text-transform: uppercase;
+   line-height: 100%;
+`
+
+export const Text5 = styled.p`
+    ${bebasNeue} 
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity .3s;
+    :hover {
+        opacity: .7;
+    }
 `

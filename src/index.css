@@ -1,7 +1,9 @@
 :root {
   --color-primary: rgb(86, 138, 185);
+  --color-primary-hover: rgb(69, 105, 137);
   --color-cream: rgb(245, 241, 234);
-  --color-cream-opa50: rgba(245, 241, 234, .5);
+  --color-black: rgb(51, 51, 51);
+  --color-cream-opa50: rgba(253, 250, 243, 0.5);
   --color-cream-opa10: rgba(245, 241, 234, .1);
   
   --bg-gradiant-1: linear-gradient(180deg, #F5F1EA 34.38%, rgba(245, 241, 234, 0.10) 75.52%, rgba(245, 241, 234, 0.00) 99.98%, rgba(102, 102, 102, 0.00) 99.99%, rgba(245, 241, 234, 0.00) 100%);
