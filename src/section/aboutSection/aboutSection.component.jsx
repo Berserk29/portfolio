@@ -8,6 +8,7 @@ import TitleStars from "../../component/titleStars/titleStars.component";
 
 const AboutSection = forwardRef(({props}, ref) => {
     const {introUp, introDown} = aboutText;
+
     return (
         <AboutContainer ref={ref}>
             <TitleStars title='About me'/>

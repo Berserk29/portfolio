@@ -124,3 +124,10 @@ export const Text5 = styled.p`
         opacity: .7;
     }
 `
+
+export const Text6 = styled.p`
+   ${heebo}
+   font-weight: 300;
+   font-size: 2.2rem;
+   line-height: 100%;
+`

@@ -1,67 +1,29 @@
-import { useEffect, useRef } from "react"
-import { Canvas } from "./physicsCanvas.styled"
-import { Engine, Render, Bodies, World, Mouse, MouseConstraint, Runner } from 'matter-js'
+import { useState } from 'react'
+
+import {FlexContainer, TextContainer, TitleContainer, TitleCss, TextCss, BallContainer} from './physicsCanvas.styled'
+import { titleArr, ballArr } from './physicsCanvas.data'
+import Typo, {TypoType} from '../../component/typo/typo.component'
+import Canvas from '../cavas/cavas.component'
 
 const PhysicsCanvas = () => {
-    const canvasRef = useRef()
-    const engine = useRef(Engine.create())
+    const [hoverNum, setHoverNum] = useState(-1)
 
-    useEffect(() => {
-        const cw = canvasRef.current.clientWidth;
-        const ch = canvasRef.current.clientHeight;
-
-        const render = Render.create({
-            element: canvasRef.current,
-            engine: engine.current,
-            options: {
-              width: cw,
-              height: ch,
-              wireframes: false,
-              background: 'transparent'
-            }  
-        })
-
-        const circleA = Bodies.circle(50,20,25)
-        const circleB = Bodies.circle(150,20,25)
-        const ground = Bodies.rectangle(350,ch,cw,15, {isStatic: true})
-        const wallLeft = Bodies.rectangle(0, 250 , 5 , ch, {isStatic: true})
-        const wallRight = Bodies.rectangle(cw, 250 , 5 , ch, {isStatic: true})
-
-        const mouse = Mouse.create(render.canvas);
-            const mouseConstraint = MouseConstraint.create(engine.current, {
-            mouse: mouse,
-            constraint: {
-                render: {visible: false}
-            }
-        })
-
-        World.add(engine.current.world, [
-            circleA,
-            circleB,
-            ground,
-            wallLeft,
-            wallRight,
-            mouseConstraint,
-        ])
-            
-        Render.run(render);
-        Runner.run(engine.current)
-        
-
-        return () => {
-            Render.stop(render)
-            World.clear(engine.current.world)
-            Engine.clear(engine.current)
-            render.canvas.remove()
-            render.canvas = null
-            render.context = null
-            render.textures = {}
-        }
-
-    }, [])
+    const setHandler = (id) => setHoverNum(id)
 
     return (
-        <Canvas ref={canvasRef}/>
+        <FlexContainer>
+            <TitleContainer>
+                {titleArr.map((el) => {
+                    return (
+                        <TextContainer key={el.id} onMouseEnter={() => setHandler(el.id)} onMouseLeave={() => setHandler(-1)}>
+                            <TitleCss><Typo type={TypoType.Headline3}>{el.title}</Typo></TitleCss>
+                            <TextCss><Typo type={TypoType.Text6}>{el.text} / {hoverNum}</Typo></TextCss>
+                        </TextContainer>
+                    )
+                })}
+            </TitleContainer>
+            <Canvas hoverNum={hoverNum}/>
+        </FlexContainer>
     )
 }
 

@@ -14,6 +14,7 @@ export const TypoType = {
     Text3: 'Text3',
     Text4: 'Text4',
     Text5: 'Text5',
+    Text6: 'Text6',
 }
 
 const Typo = ({children, type, color = 'var(--color-primary)'}) => {

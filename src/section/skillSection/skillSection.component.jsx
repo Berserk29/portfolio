@@ -7,8 +7,7 @@ const SkillSection = () => {
     return (
         <SkillContainer>
             <Typo type={TypoType.Headline2}>Skills</Typo>
-            {/* TESTING TODO NEED TO DO LATER */}
-            {/* <PhysicsCanvas /> */}
+            <PhysicsCanvas />
         </SkillContainer>
     )
 }
