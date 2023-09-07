@@ -10,7 +10,6 @@
 
   --filter-primary: invert(46%) sepia(74%) saturate(312%) hue-rotate(166deg) brightness(96%) contrast(85%);
   
-
   --box-shadow-start:
   0 0 0 160px var(--color-primary),
   0 0 0 165px var(--color-cream),
@@ -27,6 +26,24 @@
   0 0 0 130px var(--color-cream-opa50),
   0 0 0 190px var(--color-primary),
   0 0 0 195px var(--color-cream-opa10),
+  0 0 0 3000px var(--color-primary);
+
+  --box-shadow-start-mobile:
+  0 0 0 130px var(--color-primary),
+  0 0 0 135px var(--color-cream),
+  0 0 0 195px var(--color-primary),
+  0 0 0 200px var(--color-cream-opa50),
+  0 0 0 260px var(--color-primary),
+  0 0 0 265px var(--color-cream-opa10),
+  0 0 0 3000px var(--color-primary);
+  
+  --box-shadow-full-mobile:
+  0 0 0 30px var(--color-primary),
+  0 0 0 35px var(--color-cream),
+  0 0 0 95px var(--color-primary),
+  0 0 0 100px var(--color-cream-opa50),
+  0 0 0 160px var(--color-primary),
+  0 0 0 165px var(--color-cream-opa10),
   0 0 0 3000px var(--color-primary);
 
 }

@@ -38,17 +38,3 @@ export const TextContainer = styled.div`
         transform: translateX(-6rem);
     }
 `
-
-export const BallContainer = styled.div`
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    background-color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    /*  TODO  THIS WILL CHANGE FOR FILTER THE ICON */
-    transition: color .5s;
-    color: ${props => props.isHover ? 'white' : 'black'};
-`

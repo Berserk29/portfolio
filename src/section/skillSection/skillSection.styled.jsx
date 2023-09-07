@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const SkillContainer = styled.section`
     display: flex;
@@ -9,4 +10,10 @@ export const SkillContainer = styled.section`
     background-color: var(--color-cream);
     width: 100%;
     height: auto;
+    @media ${mediaQuery.styledSmTablet} {
+        padding: 8rem 0;
+    }
+    @media ${mediaQuery.styledMobile} {
+        padding: 6rem 0;
+    }
 `

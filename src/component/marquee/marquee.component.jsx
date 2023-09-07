@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import { OverflowContainer} from "./marquee.styled"
 import MarqueeText from "../marqueeText/marqueeText.component";
@@ -10,9 +10,7 @@ const Marquee = ({endAni}) => {
     const initialSpeed = 0.4;
     const [animationSpeed, setAnimationSpeed] = useState(initialSpeed)
 
-
     useEffect(() => {
-
         // INFO (debounce) if the difference betweeen scroll is greater than 150ms --> resetAnimation
         const resetAnimation = () => setAnimationSpeed(initialSpeed)
         const debouncedAnimation = debounce(resetAnimation, 150);
@@ -38,7 +36,7 @@ const Marquee = ({endAni}) => {
                 <MarqueeText 
                     key={i} 
                     props={el}
-                    animationSpeed={animationSpeed} 
+                    animationSpeed={animationSpeed}
                 />) 
             )}
         </OverflowContainer>

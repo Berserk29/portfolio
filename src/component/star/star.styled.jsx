@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { starAni } from "../../helper/keyframe"
+import mediaQuery from "../../helper/mediaQuery"
 
 export const StarCss = styled.img`
     position: absolute;
@@ -7,9 +8,16 @@ export const StarCss = styled.img`
     bottom: ${props => props.bottom || 'none'};
     right: ${props => props.right || 'none'};
     left: ${props => props.left || 'none'};
-    width: ${props => props.width};
+    width: ${props => props.width}rem;
     height: auto;
     opacity: 1;
     animation: ${starAni} 6s infinite;
     animation-delay: ${props => props.delay}s;
+
+    @media ${mediaQuery.styledSmTablet} {
+        width: ${props => props.width * 0.7}rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        width: ${props => props.width * 0.55}rem;
+    }
 `

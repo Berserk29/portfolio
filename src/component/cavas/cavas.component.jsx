@@ -7,12 +7,11 @@ import logoTest1 from '../../assets/icon/circle.png'
 const Canvas = ({hoverNum}) => {
     const canvasRef = useRef()
     const hoverNumRef = useRef(hoverNum)
-    let canvasCur;
-    let context;
     let secondsPassed = 0;
     let oldTimeStamp = 0;
+    let canvasCur;
+    let context;
     let circleArr;
-
 
     const circleIntersect = (x1, y1, r1, x2, y2, r2) => {
         // Calculate the distance between the two circles
@@ -21,8 +20,7 @@ const Canvas = ({hoverNum}) => {
         return squareDistance <= ((r1 + r2) * (r1 + r2))
     }
 
-    function detectEdgeCollisions()
-    {
+    const detectEdgeCollisions = () => {
         let obj;
         for (let i = 0; i < circleArr.length; i++)
         {

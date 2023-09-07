@@ -10,7 +10,7 @@ import {
 
 import HeadingName from "../../component/headerName/headerName.component";
 import Marquee from "../../component/marquee/marquee.component";
-import headingImg from "../../assets/image/header_img.png"
+import headingImg from "../../assets/image/main_01.jpg"
 
 
 const Header = () => {
@@ -24,6 +24,22 @@ const Header = () => {
         wait(2.9, setAnimationOn)
         wait(3.5, setEndAnimation)
     }, [])
+
+    useEffect(() => {
+        const preventDefault = event => event.preventDefault();
+        
+        // Prevent the movement at the beginning of the animation
+        window.addEventListener('wheel', preventDefault, {passive: false});
+        window.addEventListener('touchmove', preventDefault, {passive: false})
+        window.addEventListener('keydown', preventDefault)
+
+        // Remove the event after the starting animation finish (2.9s)
+        setTimeout(() => {
+            window.removeEventListener('wheel', preventDefault);
+            window.removeEventListener('touchmove', preventDefault)
+            window.removeEventListener('keydown', preventDefault)
+        }, 2900)
+    },[])
 
     return (
         <> 

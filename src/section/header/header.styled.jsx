@@ -1,7 +1,28 @@
-import styled from "styled-components";
-import { pictureAni, circleAni } from "../../helper/keyframe";
+import styled, {css} from "styled-components";
+import { pictureAni, circleAni, circleAniMobile } from "../../helper/keyframe";
+import mediaQuery from "../../helper/mediaQuery";
 
+// CSS
+const sameCss = css`
+    border-radius: 300px;
+    height: 50rem;
+    max-height: 65vh;
+    aspect-ratio: 1.65 / 1;
+    @media ${mediaQuery.styledTablet} {
+        aspect-ratio: 1.25 / 1;
+    }
+    @media ${mediaQuery.styledSmTablet} {
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        height: 42rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        border-radius: 50%;
+        height: 32rem;
+    }
+` 
 
+//  Styled component
 export const Container = styled.section`
     position: fixed;
     top: 0;
@@ -15,15 +36,15 @@ export const Container = styled.section`
 `
 
 export const AnimationContainer = styled.div`
-    border-radius: 300px;
-    height: 65vh;
-    aspect-ratio: 1.65 / 1;
+    ${sameCss}
     background-color: transparent;
     box-shadow: var(--box-shadow-start);
     opacity: 0;
-    animation: ${circleAni} 2s;
-    animation-delay: 1.5s;
-    /* TODO CHANGE ASPECT-RATIO WHEN MEDIA */
+    animation: ${circleAni} 2s 1.5s;
+    @media ${mediaQuery.styledMobile} {
+        box-shadow: var(--box-shadow-start-mobile);
+        animation: ${circleAniMobile} 2s 1.5s;
+    }
 `
 
 export const ContainerBelow = styled.header`
@@ -38,14 +59,14 @@ export const ContainerBelow = styled.header`
 `
 
 export const HeaderImg = styled.img`
-    height: 65vh;
-    aspect-ratio: 1.65 / 1;
+    ${sameCss}
     opacity: ${props => props.endAni ? 1 : 0};
     animation: ${pictureAni} 2s forwards;
     animation-delay: 1.5s;
     z-index: 2;
     cursor: pointer;
-    /* TODO CHANGE ASPECT-RATIO WHEN MEDIA */
+    object-fit: cover;
+    object-position: center;
 `
 
 

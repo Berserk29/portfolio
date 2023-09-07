@@ -1,14 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
+
 import { FlexContainer, TextContainer, Circle, CircleT } from "./marqueeText.styled";
 import Typo, { TypoType } from "../typo/typo.component";
 
 
 const MarqueeText = ({props, animationSpeed}) => {
-    // INFO CHANGE THIS VALUE IF THE MARQUEE'S SIZE CHANGE
-    const marqueeSize = 2110;
-
     const { isReverse, textArr, colorArr1, colorArr2 } = props;
-
+    const marqueeSize = 1863;
     const [distance1, setDistance1] = useState(isReverse ? marqueeSize : 0);
     const [distance2, setDistance2] = useState(isReverse ? 0 : -marqueeSize);
 
@@ -16,6 +14,7 @@ const MarqueeText = ({props, animationSpeed}) => {
     const calculLogic = (element) => isReverse ? element <= -marqueeSize : element >= marqueeSize
 
     const updateDistances = () => {
+
         setDistance1((prevDistance1) => {
           const newDistance = prevDistance1 + reverseLogic(animationSpeed);
           return calculLogic(newDistance) ? reverseLogic(-marqueeSize) : newDistance;
@@ -29,7 +28,7 @@ const MarqueeText = ({props, animationSpeed}) => {
     
     useEffect(() => {
         let animationFrameId;
-    
+
         const animate = () => {
           updateDistances();
           animationFrameId = requestAnimationFrame(animate);
@@ -65,6 +64,7 @@ const MarqueeText = ({props, animationSpeed}) => {
                 {typoLine(colorArr2)}
             </TextContainer>
         </FlexContainer>
+
     )
 }
 

@@ -1,4 +1,5 @@
 import { keyframes } from "styled-components";
+import mediaQuery from "./mediaQuery";
 
 export const movingUpText = keyframes`
     from{ transform: translate(0,0); }
@@ -42,9 +43,28 @@ export const circleAni = keyframes`
         transform: scale(3);
     }
 `
-export const nameContainerAni = keyframes`
+
+export const circleAniMobile = keyframes`
     0% {
-        transform: translate(-50%, 42vh) scale(1.5);
+        opacity: 0;
+        box-shadow: var(--box-shadow-start-mobile);
+        transform: scale(1);
+    }
+    35%, 70% {
+        box-shadow: var(--box-shadow-full-mobile);
+        opacity: 1;
+        transform: scale(.75);
+    }
+    100% {
+        box-shadow: var(--box-shadow-full-mobile);
+        opacity: 1;
+        transform: scale(3);
+    }
+`
+
+export const nameContainerAni = (scale = 1.4) => keyframes`
+    0% {
+        transform: translate(-50%, 42vh) scale(scale);
     }
     100% {
         transform: translate(-50%, 0) scale(1);

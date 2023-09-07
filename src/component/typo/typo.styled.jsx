@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 // INFO CSS
 const teko = css`
@@ -30,7 +31,7 @@ const bebasNeue = css`
 
 export const Headline1B = styled.h1`
     ${khandBold}
-    font-size: 16rem;
+    font-size: 14rem;
     color: var(--color-primary);
 `
 
@@ -46,6 +47,12 @@ export const Headline2 = styled.h2`
     line-height: 90%;
     font-weight: 600;
     font-size: 9.6rem;
+    @media ${mediaQuery.styledSmTablet} {
+        font-size: 7rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        font-size: 5rem;
+    }
 `
 
 export const Headline3 = styled.h3`
@@ -59,6 +66,15 @@ export const Headline4 = styled.h3`
     font-weight: 500;
     font-size: 5.6rem;
     line-height: 130%;
+    @media ${mediaQuery.styledTablet} {
+        font-size: 4.8rem;
+    }
+    @media ${mediaQuery.styledSmTablet} {
+        font-size: 4.2rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        font-size: 3.2rem;
+    }
 `
 
 export const Headline4P = styled(Headline4)`
@@ -85,6 +101,12 @@ export const Text1 = styled.p`
    font-size: 2.6rem;
    line-height: 160%;
    white-space: pre-line;
+   @media ${mediaQuery.styledSmTablet} {
+    font-size: 2.2rem ;
+   }
+   @media ${mediaQuery.styledMobile} {
+    font-size: 1.8rem ;
+   }
 `
 
 export const Text2 = styled.p`

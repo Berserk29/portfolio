@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const FlexContainer = styled.div`
     position: relative;
     white-space: nowrap;
-    height: 13rem;
-    width: 211rem;
+    width: 100%;
     user-select: none;
+    height: 13rem;
 `
 
 export const TextContainer = styled.div`

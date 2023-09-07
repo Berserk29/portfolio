@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-import {FlexContainer, TextContainer, TitleContainer, TitleCss, TextCss, BallContainer} from './physicsCanvas.styled'
-import { titleArr, ballArr } from './physicsCanvas.data'
+import {FlexContainer, TextContainer, TitleContainer, TitleCss, TextCss} from './physicsCanvas.styled'
+import { titleArr } from './physicsCanvas.data'
 import Typo, {TypoType} from '../../component/typo/typo.component'
 import Canvas from '../cavas/cavas.component'
 

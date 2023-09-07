@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { letterAni, nameContainerAni, letterCircleAni } from "../../helper/keyframe";
+import { letterAni, nameContainerAni, letterCircleAni} from "../../helper/keyframe";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const NameContainer = styled.div`
     position: absolute;
@@ -7,9 +8,16 @@ export const NameContainer = styled.div`
     top: 5vh;
     left: 50%;
     z-index: 3;
-    transform: translate(-50%, 42vh) scale(1.5); 
-    animation: ${nameContainerAni} .5s forwards;
-    animation-delay: 2.9s;
+    transform: translate(-50%, 42vh) scale(1.4); 
+    animation: ${nameContainerAni} .5s forwards 2.9s;
+    @media ${mediaQuery.styledSmTablet} {
+        transform: translate(-50%, 42vh) scale(1.2);
+        animation: ${nameContainerAni(1.2)} .5s forwards 2.9s;
+    }
+    @media ${mediaQuery.styledMobile} {
+        transform: translate(-50%, 42vh) scale(0.8);
+        animation: ${nameContainerAni(.8)} .5s forwards 2.9s;
+    }
 `
 
 export const RelativeSection = styled.div`
@@ -27,11 +35,17 @@ export const LetterSpan = styled.span`
     transform: translateY(100%);
     animation: ${letterAni} 1.6s forwards ${props => props.cubic};
     animation-delay: 1.8s;
+    :first-child{
+        padding-left: .8rem;
+    }
+    @media ${mediaQuery.styledTablet} {
+        font-size: 5rem;
+    }
 `
 
 export const LetterSpanAfter = styled(LetterSpan)`
     position: relative;
-    padding-right: 1.8rem;
+    padding-right: 1.6rem;
     &::after {
         content: "";
         top: 8px;

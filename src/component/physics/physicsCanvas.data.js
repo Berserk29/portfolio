@@ -2,50 +2,26 @@ export const titleArr = [
     {
         id: 0,
         title: 'React',
-        text: 'useState(true)'
+        text: 'useRef( )'
     },
     {
         id: 1,
         title: 'Javascript',
-        text: '{js}'
+        text: 'update( )'
     },
     {
         id: 2,
         title: 'Styled',
-        text: 'styled.img'
+        text: 'styled.div'
     },
     {
         id: 3,
         title: 'CSS',
-        text: '{Css}'
+        text: 'display: flex;'
     },
     {
         id: 4,
         title: 'Html',
-        text: '<div></div>'
+        text: '<canvas/>'
     },
-]
-
-// TESTING TODO TEXT WILL CHANGE FOR ICON
-export const ballArr = [
-    {   
-        id: 1,
-        text: 'React'
-    },    
-    {   
-        id: 2,
-        text: 'Java'
-    },    
-    {   
-        id: 3,
-        text: 'Styled'
-    },    
-    {   
-        id: 4,
-        text: 'Css'
-    },    
-    {   
-        id: 5,
-        text: 'Html'
-    },    
 ]

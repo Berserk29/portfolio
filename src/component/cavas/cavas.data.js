@@ -1,4 +1,4 @@
-export class GameObject
+export class CanvasObject
 {
     constructor (context, x, y, vx, vy){
         this.context = context;
@@ -12,7 +12,7 @@ export class GameObject
     }
 }
 
-export class Circle extends GameObject
+export class Circle extends CanvasObject
 {
     constructor (context, x, y, vx, vy, svgIconUrl){
         super(context, x, y, vx, vy);

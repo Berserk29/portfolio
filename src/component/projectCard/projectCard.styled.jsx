@@ -55,7 +55,6 @@ export const FirstText = styled.div`
     display: flex;
     gap: 1.4rem;
     align-items: flex-end;
-    transform: translateZ(100px);
 `
 
 export const ArrowImg = styled.img`

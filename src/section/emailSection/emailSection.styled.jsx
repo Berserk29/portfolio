@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const EmailContainer = styled.section`
     display: flex;
@@ -6,8 +7,14 @@ export const EmailContainer = styled.section`
     align-items: center;
     text-align: center;
     gap: 6rem;
-    padding: 16rem 14rem 12rem 14rem;
+    padding: 16rem 8rem 12rem 8rem;
     background-color: var(--color-primary);
+    @media ${mediaQuery.styledSmTablet} {
+        padding: 8rem 3rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        padding: 6rem 2rem;
+    }
 `
 
 export const TextContainer = styled.div`

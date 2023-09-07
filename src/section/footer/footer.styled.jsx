@@ -1,11 +1,15 @@
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const FooterContainer = styled.footer`
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
     padding: 6.2rem 14.5rem;
     color: var(--color-cream);
+    @media ${mediaQuery.styledTablet} {
+        padding: 5rem 8rem;
+    }
 `
 
 export const LinkContainer = styled.div`
