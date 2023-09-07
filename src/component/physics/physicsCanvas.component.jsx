@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import {FlexContainer, TextContainer, TitleContainer, TitleCss, TextCss} from './physicsCanvas.styled'
 import { titleArr } from './physicsCanvas.data'
 import Typo, {TypoType} from '../../component/typo/typo.component'
-import Canvas from '../cavas/cavas.component'
+import Canvas from '../cavas/canvas.component'
 
 const PhysicsCanvas = () => {
     const [hoverNum, setHoverNum] = useState(-1);
@@ -24,7 +24,7 @@ const PhysicsCanvas = () => {
                     )
                 })}
             </TitleContainer>
-            { inView && <Canvas hoverNum={hoverNum}/>}
+            <div>{ inView && <Canvas hoverNum={hoverNum}/>}</div>
         </FlexContainer>
     )
 }

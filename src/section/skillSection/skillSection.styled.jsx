@@ -6,7 +6,7 @@ export const SkillContainer = styled.section`
     flex-direction: column;
     align-items: center;
     gap: 10rem;
-    padding: 14.5rem 14rem 16rem 14rem;
+    padding: 14.5rem 2.5rem 16rem 2.5rem;
     background-color: var(--color-cream);
     width: 100%;
     height: auto;

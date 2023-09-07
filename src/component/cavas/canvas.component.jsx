@@ -1,8 +1,6 @@
 import { useRef, useEffect } from "react";
-import { Circle } from "./cavas.data";
-
-import svgIcon from '../../assets/icon/Devicon-html5-plain.svg'
-import logoTest1 from '../../assets/icon/circle.png'
+import { Circle } from "./canvas.data";
+import { canvasArr } from "./canvas.data";
 
 const Canvas = ({hoverNum}) => {
     const canvasRef = useRef()
@@ -121,20 +119,17 @@ const Canvas = ({hoverNum}) => {
     useEffect(() => {
         canvasCur = canvasRef?.current;
         context = canvasCur.getContext('2d')
-        
-        circleArr = [
-            new Circle(context, 250, 50, 0, 60, svgIcon),
-            new Circle(context, 250, 300, 0, -60, logoTest1),
-            new Circle(context, 0, 0, 60, 60),
-            new Circle(context, 500, 0 , -60, 60),
-            new Circle(context, 0, 500, 60, -60),
-        ]
+
+        circleArr = canvasArr.map((el) => {
+            const {x, y, vx, vy, logo, color} = el;
+            return new Circle(context, x, y, vx, vy, logo, color)
+        }) 
 
         window.requestAnimationFrame(gameLoop)        
-    },[])
+    },[canvasArr])
 
     return (
-        <canvas ref={canvasRef} width={650} height={400} style={{border: '1px solid var(--color-primary)'}}/>
+        <canvas ref={canvasRef} width={600} height={400} style={{border: '1px solid var(--color-primary)'}}/>
     )
 }
 

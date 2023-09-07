@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const FlexContainer = styled.div`
     display: flex;
-    justify-content: center;
-    gap: 12.5rem;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
+    gap: 5rem;
+    max-width: 1400px;
+    @media ${mediaQuery.styledTablet} {
+        flex-direction: column-reverse;
+    }
 `
 
 export const TitleContainer = styled.div`
