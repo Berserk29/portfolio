@@ -35,6 +35,8 @@ export class Circle extends GameObject
         };
     }
 
+    // TODO PROPABLY CHANGE THE ICON BY HOVER OR NOT 
+
     draw(){
         // Draw a simple Circle
         this.context.beginPath();
@@ -44,8 +46,8 @@ export class Circle extends GameObject
 
         if (this.svgIcon instanceof Image && this.svgIcon.complete) {
             // You can adjust the position and size of the SVG icon as needed
-            const iconWidth = 45;
-            const iconHeight = 45;
+            const iconWidth = this.isHover ? 50 : 35;
+            const iconHeight = this.isHover ? 50 : 35;
             this.context.drawImage(this.svgIcon, this.x - iconWidth / 2, this.y - iconHeight / 2, iconWidth, iconHeight);
         }
     }

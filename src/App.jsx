@@ -20,12 +20,12 @@ function App() {
 
   return (
     <>
-      {/* <Header/> */}
-      {/* <AboutSection ref={aboutRef}/> */}
-      {/* <ProjectSection ref={projectRef}/> */}
+      <Header/>
+      <AboutSection ref={aboutRef}/>
+      <ProjectSection ref={projectRef}/>
       <SkillSection />
-      {/* <EmailSection/> */}
-      {/* <Footer ref={[projectRef, aboutRef]}/> */}
+      <EmailSection/>
+      <Footer ref={[projectRef, aboutRef]}/>
     </>
   )
 }

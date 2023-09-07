@@ -2,9 +2,11 @@ import { useRef, useEffect } from "react";
 import { Circle } from "./cavas.data";
 
 import svgIcon from '../../assets/icon/Devicon-html5-plain.svg'
+import logoTest1 from '../../assets/icon/circle.png'
 
 const Canvas = ({hoverNum}) => {
     const canvasRef = useRef()
+    const hoverNumRef = useRef(hoverNum)
     let canvasCur;
     let context;
     let secondsPassed = 0;
@@ -103,14 +105,19 @@ const Canvas = ({hoverNum}) => {
         detectEdgeCollisions();
         clearCanvas();
 
+
         for (let i = 0; i < circleArr.length; i++) {
+            hoverNumRef.current === i ? circleArr[i].isHover = true : circleArr[i].isHover = false;
             circleArr[i].draw()
-            hoverNum === i ? circleArr[i].isHover = true : circleArr[i].isHover = false;
         }
 
         // Keep requesting new frames
         window.requestAnimationFrame(gameLoop);
     }
+
+    useEffect(() => {
+        hoverNumRef.current = hoverNum;
+    }, [hoverNum])
 
     
     useEffect(() => {
@@ -119,10 +126,10 @@ const Canvas = ({hoverNum}) => {
         
         circleArr = [
             new Circle(context, 250, 50, 0, 60, svgIcon),
-            new Circle(context, 250, 300, 0, -60),
+            new Circle(context, 250, 300, 0, -60, logoTest1),
             new Circle(context, 0, 0, 60, 60),
-            new Circle(context, 350, 150, -60, 60),
-            new Circle(context, 600, 0, -60, 60),
+            new Circle(context, 500, 0 , -60, 60),
+            new Circle(context, 0, 500, 60, -60),
         ]
 
         window.requestAnimationFrame(gameLoop)        
