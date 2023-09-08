@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 import { 
     FlexContainer, 
@@ -19,24 +19,16 @@ const ProjectCard = ({props, justify}) => {
     const { image, projectName, description, time, textMarqueeArr, isMarqueeForward, link} = props;
     const cardRef = useRef()
     const btnRef = useRef()
-    let cardCur;
-    let btnCur;
     
     // IF THE NUMBER IS LOW --> MORE MOVEMENT. IF THE NUMBER IS HIGH --> LESS MOVEMENT.
     const rotationPower = 20;
 
-    useEffect(() => {
-        cardCur = cardRef?.current;
-        btnCur = btnRef?.current;
-    },[cardRef, btnRef])
- 
-
     const moveHandler = (e) => {
-        if(!cardCur) return;
+        if(!cardRef) return;
         const domRect = e.currentTarget.getBoundingClientRect();
-        const visibleX = (cardCur?.clientWidth / 2 ) / rotationPower;
+        const visibleX = (cardRef.current.clientWidth / 2 ) / rotationPower;
         const hiddenX = +((domRect.width / 2 ) / rotationPower - visibleX).toFixed(1);
-        const visibleY = (cardCur?.clientHeight / 2 ) / rotationPower;
+        const visibleY = (cardRef.current.clientHeight / 2 ) / rotationPower;
         const hiddenY = +((domRect.height / 2 ) / rotationPower - visibleY).toFixed(1);
 
         // MOUSE POSITION ON THE CARDCONTAINER --> THE MIDDLE PART WILL BE 0
@@ -60,20 +52,20 @@ const ProjectCard = ({props, justify}) => {
             yAxis = yAxis * hiddenNum ;
         }
 
-        cardCur.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
+        cardRef.current.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
     }
 
     const enterHandler = () => {
-        if(!cardCur || !btnCur ) return;
-        cardCur.style.transition = 'all 0.1s ease';
-        btnCur.style.opacity = 1;
+        if(!cardRef || !btnRef ) return;
+        cardRef.current.style.transition = 'all 0.1s ease';
+        btnRef.current.style.opacity = 1;
     }
 
     const leaveHandler = () => {
-        if(!cardCur || !btnCur ) return;
-        cardCur.style.transition = 'all 0.4s ease'
-        cardCur.style.transform = 'rotateY(0deg) rotateX(0deg)'
-        btnCur.style.opacity = 0;
+        if(!cardRef || !btnRef ) return;
+        cardRef.current.style.transition = 'all 0.4s ease'
+        cardRef.current.style.transform = 'rotateY(0deg) rotateX(0deg)'
+        btnRef.current.style.opacity = 0;
     }
 
     return (

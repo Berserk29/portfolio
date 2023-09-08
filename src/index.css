@@ -7,7 +7,7 @@
   --color-cream-opa10: rgba(245, 241, 234, .1);
   
   --bg-gradiant-1: linear-gradient(180deg, #F5F1EA 34.38%, rgba(245, 241, 234, 0.10) 75.52%, rgba(245, 241, 234, 0.00) 99.98%, rgba(102, 102, 102, 0.00) 99.99%, rgba(245, 241, 234, 0.00) 100%);
-
+  
   --filter-primary: invert(46%) sepia(74%) saturate(312%) hue-rotate(166deg) brightness(96%) contrast(85%);
   
   --box-shadow-start:
@@ -18,7 +18,7 @@
   0 0 0 290px var(--color-primary),
   0 0 0 295px var(--color-cream-opa10),
   0 0 0 3000px var(--color-primary);
-  
+   
   --box-shadow-full:
   0 0 0 60px var(--color-primary),
   0 0 0 65px var(--color-cream),
@@ -56,7 +56,7 @@
   box-sizing: border-box;
 }
 
-/* INFO  HIDE THE SCROLLBAR*/
+/* INFO HIDE THE SCROLLBAR*/
 ::-webkit-scrollbar{
   display: none; 
 }

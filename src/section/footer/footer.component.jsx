@@ -1,6 +1,8 @@
 import Circle from "../../component/circle/circle.component";
 import Typo, { TypoType } from "../../component/typo/typo.component";
 import { FooterContainer, LinkContainer, FlexContainer, ResumeLink } from "./footer.styled";
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
 
 import { circleArr, linkArr } from "./footer.data";
 import { forwardRef } from "react";
@@ -8,6 +10,7 @@ import resume from '../../assets/resume/OlivierTrudeau_resume.pdf'
 
 
 const Footer = forwardRef(({props},ref) => {
+    const isTablet = useMediaQuery(mediaQuery.useTablet)
 
     const scrollToHandler = (ref) => {
         if(ref && ref.current)
@@ -29,9 +32,11 @@ const Footer = forwardRef(({props},ref) => {
                     <Typo type={TypoType.Text5} color="var(--color-black)" >resume</Typo>
                 </ResumeLink>
             </LinkContainer>
-            <FlexContainer justify='flex-end'>
-                { circleArr.map((el,i) => <Circle key={i} props={el}/> ) }
-            </FlexContainer>
+            {   !isTablet &&
+                <FlexContainer justify='flex-end'>
+                    { circleArr.map((el,i) => <Circle key={i} props={el}/> ) }
+                </FlexContainer>
+            }
         </FooterContainer>
     )
 })

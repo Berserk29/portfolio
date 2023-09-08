@@ -13,7 +13,7 @@ export const EmailContainer = styled.section`
         padding: 8rem 3rem;
     }
     @media ${mediaQuery.styledMobile} {
-        padding: 6rem 2rem;
+        padding: 6rem 3rem;
     }
 `
 

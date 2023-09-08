@@ -10,12 +10,23 @@ export const FooterContainer = styled.footer`
     @media ${mediaQuery.styledTablet} {
         padding: 5rem 8rem;
     }
+    @media ${mediaQuery.styledSmTablet} {
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem;
+        gap: 4rem;
+    }
 `
 
 export const LinkContainer = styled.div`
     display: flex;
     gap: 4rem;
     margin-bottom: .8rem;
+    @media ${mediaQuery.styledSmTablet} {
+        width: 100%;
+        max-width: 40rem;
+        justify-content: space-between;
+    }
 `
 
 export const FlexContainer = styled.div`
@@ -23,6 +34,9 @@ export const FlexContainer = styled.div`
     justify-content: ${props => props.justify};
     gap: 2rem;
     width: 35.2rem;
+    @media ${mediaQuery.styledSmTablet} {
+        justify-content: center;
+    }
 `
 
 export const ResumeLink = styled.a`

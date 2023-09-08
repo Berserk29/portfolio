@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useLayoutEffect } from "react";
 import { Circle } from "./canvas.data";
 import { canvasArr } from "./canvas.data";
 
@@ -83,8 +83,8 @@ const Canvas = ({hoverNum}) => {
         }
     }
 
+    // Clear all the canvas
     const clearCanvas = () => {
-        // Clear all the canvas
         context.clearRect(0,0, canvasCur.width, canvasCur.height)
     }
  

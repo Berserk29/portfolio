@@ -10,13 +10,12 @@ import Footer from "./section/footer/footer.component"
 function App() {
   const aboutRef = useRef()
   const projectRef = useRef()
+  
   // INFO MAKE THE REFRESH COMEBACK TO THE BEGINNING
   useEffect(() => {
     window.history.scrollRestoration = 'manual';
     window.focus();
   },[])
-
-  // TESTING NEED TO BRING BACK
 
   return (
     <>

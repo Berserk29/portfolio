@@ -85,6 +85,9 @@ export const Headline5 = styled.h4`
     ${bebasNeue}
     font-size: 4rem;
     text-transform: uppercase;
+    @media ${mediaQuery.styledSmTablet} {
+        font-size: 3.6rem;
+    }
 `
 
 export const GiantHeadline = styled.span`
@@ -105,7 +108,7 @@ export const Text1 = styled.p`
     font-size: 2.2rem ;
    }
    @media ${mediaQuery.styledMobile} {
-    font-size: 1.8rem ;
+    font-size: 2rem ;
    }
 `
 
@@ -115,6 +118,12 @@ export const Text2 = styled.p`
    font-size: 2.6rem;
    line-height: 160%;
    white-space: pre-line;
+   @media ${mediaQuery.styledSmTablet} {
+    font-size: 2.2rem ;
+   }
+   @media ${mediaQuery.styledMobile} {
+    font-size: 2rem ;
+   }
 `
 
 export const Text3 = styled.p`
@@ -132,6 +141,9 @@ export const Text4 = styled.p`
    font-size: 2.4rem;
    text-transform: uppercase;
    line-height: 100%;
+   @media ${mediaQuery.styledSmTablet} {
+        font-size: 2rem;
+   }
 `
 
 export const Text5 = styled.p`

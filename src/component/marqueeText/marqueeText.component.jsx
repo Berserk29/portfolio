@@ -15,15 +15,13 @@ const MarqueeText = ({props, animationSpeed}) => {
 
     const updateDistances = () => {
 
-        setDistance1((prevDistance1) => {
-          const newDistance = prevDistance1 + reverseLogic(animationSpeed);
-          return calculLogic(newDistance) ? reverseLogic(-marqueeSize) : newDistance;
-        });
-    
-        setDistance2((prevDistance2) => {
-          const newDistance = prevDistance2 + reverseLogic(animationSpeed);
-          return calculLogic(newDistance) ? reverseLogic(-marqueeSize) : newDistance;
-        });
+        const newDistanceFn = (prevDistance) => {
+            const newDistance = prevDistance + reverseLogic(animationSpeed);
+            return calculLogic(newDistance) ? reverseLogic(-marqueeSize) : newDistance;
+        }
+
+        setDistance1((prevDistance1) => newDistanceFn(prevDistance1))
+        setDistance2((prevDistance2) => newDistanceFn(prevDistance2))
     };
     
     useEffect(() => {
