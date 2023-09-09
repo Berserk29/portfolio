@@ -79,6 +79,12 @@ export const Headline4 = styled.h3`
 
 export const Headline4P = styled(Headline4)`
     line-height: 4rem;
+    @media ${mediaQuery.styledTablet} {
+        line-height: 3rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        line-height: 2.3rem;
+    }
 `
 
 export const Headline5 = styled.h4`
@@ -133,6 +139,12 @@ export const Text3 = styled.p`
    line-height: 100%;
    white-space: pre-line;
    text-transform: none;
+   @media ${mediaQuery.styledTablet} {
+        font-size: 2rem;
+   }
+   @media ${mediaQuery.styledMobile} {
+        font-size: 1.6rem;
+   }
 `
 
 export const Text4 = styled.p`

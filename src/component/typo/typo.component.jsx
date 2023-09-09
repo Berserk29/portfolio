@@ -1,4 +1,5 @@
 import * as Styled from './typo.styled'
+import { useMemo } from 'react';
 
 export const TypoType = {
     GiantHeadline: 'GiantHeadline',
@@ -18,7 +19,9 @@ export const TypoType = {
 }
 
 const Typo = ({children, type, color = 'var(--color-primary)'}) => {
-    const StyledComponent = Styled[TypoType[type]];
+    const StyledComponent = useMemo(() => Styled[TypoType[type]]);
+
+    console.log('djfl')
 
     return (
         <StyledComponent color={color}>{children}</StyledComponent>
