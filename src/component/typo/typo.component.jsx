@@ -1,3 +1,4 @@
+import React from 'react';
 import * as Styled from './typo.styled'
 import { useMemo } from 'react';
 
@@ -18,14 +19,14 @@ export const TypoType = {
     Text6: 'Text6',
 }
 
-const Typo = ({children, type, color = 'var(--color-primary)'}) => {
-    const StyledComponent = useMemo(() => Styled[TypoType[type]]);
+// React.memo to memorized the component and not re render if the state change but the typo don't change
 
-    console.log('djfl')
+const Typo = React.memo(({children, type, color = 'var(--color-primary)'}) => {
+    const StyledComponent = useMemo(() => Styled[TypoType[type]]);
 
     return (
         <StyledComponent color={color}>{children}</StyledComponent>
     )
-}
+})
 
 export default Typo

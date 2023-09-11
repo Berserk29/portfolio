@@ -17,7 +17,7 @@ export const TextContainer = styled.div`
     display: flex;
     white-space: nowrap;
     align-items: center;
-    animation: ${props => props.isForward ? infiniteAniForward : infiniteAniBackward} 25s linear infinite; 
+    animation: ${props => props.isForward ? infiniteAniForward : infiniteAniBackward} 35s linear infinite; 
 `
 
 export const Circle = styled.div`

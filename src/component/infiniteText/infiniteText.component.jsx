@@ -6,6 +6,7 @@ import { Fragment } from "react";
 const InfiniteText = ({textArr, isForward}) => {
     const textNumArr = [1, 2] 
 
+
     return (
         <FlexContainer isForward={isForward}>
             {   textNumArr.map((_,i) => {

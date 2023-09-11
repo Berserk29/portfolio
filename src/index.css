@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #568ab8;
+  --color-primary: rgb(86, 138, 184);
   --color-primary-hover: rgb(69, 105, 137);
   --color-cream: rgb(245, 241, 234);
   --color-black: rgb(51, 51, 51);
@@ -7,7 +7,9 @@
   --color-cream-opa10: rgba(245, 241, 234, .1);
   
   --bg-gradiant-1: linear-gradient(180deg, #F5F1EA 34.38%, rgba(245, 241, 234, 0.10) 75.52%, rgba(245, 241, 234, 0.00) 99.98%, rgba(102, 102, 102, 0.00) 99.99%, rgba(245, 241, 234, 0.00) 100%);
-  
+  --bg-gradiant-card-1: linear-gradient(to right bottom, var(--color-cream), var(--color-primary)); 
+  --bg-gradiant-card-2: linear-gradient(to right bottom, var(--color-primary), var(--color-cream));; 
+
   --filter-primary: invert(46%) sepia(74%) saturate(312%) hue-rotate(166deg) brightness(96%) contrast(85%);
   
   --box-shadow-start:

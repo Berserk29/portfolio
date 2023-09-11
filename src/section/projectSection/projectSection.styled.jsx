@@ -22,4 +22,7 @@ export const CardContainer = styled.div`
     width: 100%;
     flex-direction: column;
     gap: 12rem;
+    @media ${mediaQuery.styledMobile} {
+        gap: 8rem;
+    }
 `

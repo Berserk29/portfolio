@@ -22,7 +22,7 @@ function App() {
       <Header/>
       <AboutSection ref={aboutRef}/>
       <ProjectSection ref={projectRef}/>
-      {/* <SkillSection /> */}
+      <SkillSection />
       <EmailSection/>
       <Footer ref={[projectRef, aboutRef]}/>
     </>
