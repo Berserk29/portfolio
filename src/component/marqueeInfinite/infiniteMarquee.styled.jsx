@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { infiniteAniBackward, infiniteAniForward } from "../../helper/keyframe";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const OverflowContainer = styled.div`
     position: absolute;
@@ -16,7 +17,7 @@ export const OverflowContainer = styled.div`
 export const FlexContainer = styled.div`
     white-space: nowrap;
     height: auto;
-    width: 110%;
+    width: 120%;
     user-select: none;
     display: flex;
     flex-direction: ${ props => props.isForward ? 'row-reverse' : 'row'};
@@ -32,10 +33,19 @@ export const TextContainer = styled.div`
 
 export const Circle = styled.div`
     width: 4.6rem;
-    height: 4.6rem;
+    aspect-ratio: 1 / 1;
     margin-bottom: 1.5rem;
     border-radius: 50%;
     background-color: var(--color-primary);
+    @media ${mediaQuery.styledTablet} {
+       width: 4rem;
+    }
+    @media ${mediaQuery.styledSmTablet} {
+       width: 3.25rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+       width: 2.3rem;
+    }
 `
 
 export const CircleT = styled(Circle)`

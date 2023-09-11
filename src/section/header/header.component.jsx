@@ -49,8 +49,8 @@ const Header = () => {
             <ContainerBelow changeColor={animationOn} ref={ref}>
                 <HeadingName />
                 <HeaderImg src={headingImg} endAni={endAnimation}/>
-                {/* { inView && <Marquee endAni={endAnimation}/>} */}
                 <InfiniteMarquee />
+                {/* { inView && <Marquee endAni={endAnimation}/>} */}
             </ContainerBelow>
         </>
     )

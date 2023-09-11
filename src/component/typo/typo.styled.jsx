@@ -33,6 +33,15 @@ export const Headline1B = styled.h1`
     ${khandBold}
     font-size: 14rem;
     color: var(--color-primary);
+    @media ${mediaQuery.styledTablet} {
+        font-size: 12rem;
+    }
+    @media ${mediaQuery.styledSmTablet} {
+        font-size: 10rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        font-size: 7rem;
+    }
 `
 
 export const Headline1T = styled(Headline1B)`
