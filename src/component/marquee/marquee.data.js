@@ -18,3 +18,21 @@ export const marqueeArr = [
         colorArr2: [true, false, true]
     },
 ]
+
+export const infiniteMarqueeArr = [
+    {
+        isForward: true,
+        textArr: ['Developper', 'Olivier', 'Front end'],
+        colorArr: [true, false, true], 
+    },
+    {
+        isForward: false,
+        textArr: ['Front end', 'Developper', 'Olivier'],
+        colorArr: [true, false, true], 
+    },
+    {
+        isForward: true,
+        textArr: ['Olivier', 'Front end', 'Developper'],
+        colorArr: [false, true , false],
+    },
+]

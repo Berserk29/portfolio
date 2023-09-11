@@ -3,26 +3,22 @@ import Typo, { TypoType } from "../typo/typo.component";
 import { Fragment } from "react";
 
 
-const InfiniteText = ({textArr, isForward}) => {
+const InfiniteText = ({textArr, isForward, color = 'var(--color-cream)'}) => {
     const textNumArr = [1, 2] 
 
 
     return (
         <FlexContainer isForward={isForward}>
-            {   textNumArr.map((_,i) => {
-                    return (
-                        <TextContainer key={i} isForward={isForward}>
-                            {  textArr.map((el,i) => (
-                                <Fragment key={i}>
-                                    <Circle />
-                                    <Typo type={TypoType.GiantHeadline}>&nbsp;{el}&nbsp;</Typo>
-                                </Fragment>
-                            ))  
-                            }
-                        </TextContainer>
-                    )
-                })
-            }
+            {   textNumArr.map((_,i) => (
+                <TextContainer key={i} isForward={isForward}>
+                    {  textArr.map((el,i) => (
+                        <Fragment key={i}>
+                            <Circle color={color}/>
+                            <Typo type={TypoType.GiantHeadline} borderColor={color}>&nbsp;{el}&nbsp;</Typo>
+                        </Fragment>
+                    ))}
+                </TextContainer>
+            ))}
         </FlexContainer>
     )
 }

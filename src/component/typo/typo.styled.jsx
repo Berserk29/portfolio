@@ -101,7 +101,7 @@ export const GiantHeadline = styled.span`
     font-size: 24.8rem;
     color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--color-cream);
+    -webkit-text-stroke-color: ${props => props.borderColor || 'var(--color-cream)'};
 `
 
 export const Text1 = styled.p`

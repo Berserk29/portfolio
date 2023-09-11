@@ -21,11 +21,11 @@ export const TypoType = {
 
 // React.memo to memorized the component and not re render if the state change but the typo don't change
 
-const Typo = React.memo(({children, type, color = 'var(--color-primary)'}) => {
+const Typo = React.memo(({children, type, color = 'var(--color-primary)', borderColor}) => {
     const StyledComponent = useMemo(() => Styled[TypoType[type]]);
 
     return (
-        <StyledComponent color={color}>{children}</StyledComponent>
+        <StyledComponent color={color} borderColor={borderColor}>{children}</StyledComponent>
     )
 })
 

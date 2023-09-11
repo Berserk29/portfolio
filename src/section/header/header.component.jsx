@@ -11,6 +11,8 @@ import {
 import HeadingName from "../../component/headerName/headerName.component";
 import Marquee from "../../component/marquee/marquee.component";
 import headingImg from "../../assets/image/main_01.jpg"
+import InfiniteText from '../../component/infiniteText/infiniteText.component'
+import InfiniteMarquee from "../../component/marqueeInfinite/infiniteMarquee.component";
 
 
 const Header = () => {
@@ -43,11 +45,12 @@ const Header = () => {
 
     return (
         <> 
-            { !endAnimation && <Container><AnimationContainer/></Container> }
+            { !endAnimation ? <Container><AnimationContainer/></Container> : null }
             <ContainerBelow changeColor={animationOn} ref={ref}>
                 <HeadingName />
                 <HeaderImg src={headingImg} endAni={endAnimation}/>
-                { inView && <Marquee endAni={endAnimation}/>}
+                {/* { inView && <Marquee endAni={endAnimation}/>} */}
+                <InfiniteMarquee />
             </ContainerBelow>
         </>
     )
