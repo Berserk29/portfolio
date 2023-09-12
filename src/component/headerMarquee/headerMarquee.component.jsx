@@ -1,5 +1,5 @@
 import { OverflowContainer, Circle, CircleT, FlexContainer, TextContainer, Headline1B, Headline1T } from "./headerMarquee.styled";
-import { marqueeArr } from '../marquee/marquee.data'
+import { marqueeArr } from './headerMarquee.data'
 
 const HeaderMarquee = () => {
     const doubleArr = [ 1, 2 ];

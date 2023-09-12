@@ -33,7 +33,7 @@ const ProjectCardTouch = ({props, justify}) => {
     }
 
     return (
-        <Container justify={justify}>
+        <Container justify={justify} onClick={() => console.log('testing')}>
             {!isSmTablet ? <InfiniteText textArr={textMarqueeArr} isForward={isMarqueeForward} /> : null}
             <CardContainer onClick={clickHandler}>
                 <CardImg image={image} style={{transform: logicRotate(-180, 0)}}/>

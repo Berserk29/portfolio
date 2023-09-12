@@ -7,9 +7,9 @@ import {
     ContainerBelow,
 } from "./header.styled";
 
-import HeadingName from "../../component/headerName/headerName.component";
-import headingImg from "../../assets/image/main_01.jpg"
+import HeaderName from "../../component/headerName/headerName.component";
 import HeaderMarquee from "../../component/headerMarquee/headerMarquee.component";
+import headingImg from "../../assets/image/main_01.jpg"
 
 
 const Header = () => {
@@ -43,7 +43,7 @@ const Header = () => {
         <> 
             { !endAnimation ? <Container><AnimationContainer/></Container> : null }
             <ContainerBelow changeColor={animationOn} >
-                <HeadingName />
+                <HeaderName />
                 <HeaderImg src={headingImg} endAni={endAnimation}/>
                 <HeaderMarquee />
             </ContainerBelow>

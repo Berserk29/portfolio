@@ -26,14 +26,16 @@ const Footer = forwardRef(({props},ref) => {
                 </FlexContainer> 
             } 
             <LinkContainer>
-                {linkArr.map((el,i) => (
-                    <div key={i} onClick={() => scrollToHandler(ref?.[i])}>
-                        <Typo  type={TypoType.Text5} color="var(--color-black)">{el}</Typo>
-                    </div>    
-                ))}    
-                <ResumeLink href={resume} download={'Olivier_Trudeau_Resume'}>
-                    <Typo type={TypoType.Text5} color="var(--color-black)" >resume</Typo>
-                </ResumeLink>
+                    {linkArr.map((el,i) => (
+                        el === 'resume' ?
+                        <ResumeLink key={i} href={resume} download={'Olivier_Trudeau_Resume'}>
+                            <Typo type={TypoType.Text5} color="var(--color-black)" >{el.text}</Typo>
+                        </ResumeLink>
+                            :
+                        <div key={i} onClick={() => scrollToHandler(ref[el.link])}>
+                            <Typo  type={TypoType.Text5} color="var(--color-black)">{el.text}</Typo>
+                        </div>    
+                    ))}    
             </LinkContainer>
             {   !isTablet &&
                 <FlexContainer justify='flex-end'>

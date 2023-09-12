@@ -1,4 +1,17 @@
-export const linkArr = ['work', 'about']
+export const linkArr = [
+    {
+        text: 'work',
+        link: 'projectRef'
+    },
+    {
+        text: 'resume',
+        link: null
+    },
+    {
+        text: 'about',
+        link: 'aboutRef'
+    },
+]
 
 export const circleArr = [
     {

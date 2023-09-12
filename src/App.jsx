@@ -24,7 +24,7 @@ function App() {
       <ProjectSection ref={projectRef}/>
       <SkillSection />
       <EmailSection/>
-      <Footer ref={[projectRef, aboutRef]}/>
+      <Footer ref={{projectRef, aboutRef}}/>
     </>
   )
 }
