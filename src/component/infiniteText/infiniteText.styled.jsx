@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { infiniteAniBackward, infiniteAniForward } from "../../helper/keyframe";
-
+import { khandBold } from "../typo/typo.styled";
 
 export const FlexContainer = styled.div`
     position: absolute;
@@ -26,5 +26,13 @@ export const Circle = styled.div`
     margin-bottom: 1.5rem;
     border-radius: 50%;
     background-color: transparent;
-    border: 1px solid ${props => props.color};
+    border: 1px solid ${props => props.color || 'var(--color-cream)'};
+`
+
+export const GiantHeadline = styled.span`
+    ${khandBold}
+    font-size: 24.8rem;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: ${props => props.borderColor || 'var(--color-cream)'};
 `

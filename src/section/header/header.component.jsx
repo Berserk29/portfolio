@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 
 import {
     Container,
@@ -9,14 +8,11 @@ import {
 } from "./header.styled";
 
 import HeadingName from "../../component/headerName/headerName.component";
-import Marquee from "../../component/marquee/marquee.component";
 import headingImg from "../../assets/image/main_01.jpg"
-import InfiniteText from '../../component/infiniteText/infiniteText.component'
-import InfiniteMarquee from "../../component/marqueeInfinite/infiniteMarquee.component";
+import HeaderMarquee from "../../component/headerMarquee/headerMarquee.component";
 
 
 const Header = () => {
-    const {ref, inView} = useInView()
     const [animationOn, setAnimationOn] = useState(false)
     const [endAnimation, setEndAnimation] = useState(false)
     
@@ -46,11 +42,10 @@ const Header = () => {
     return (
         <> 
             { !endAnimation ? <Container><AnimationContainer/></Container> : null }
-            <ContainerBelow changeColor={animationOn} ref={ref}>
+            <ContainerBelow changeColor={animationOn} >
                 <HeadingName />
                 <HeaderImg src={headingImg} endAni={endAnimation}/>
-                <InfiniteMarquee />
-                {/* { inView && <Marquee endAni={endAnimation}/>} */}
+                <HeaderMarquee />
             </ContainerBelow>
         </>
     )

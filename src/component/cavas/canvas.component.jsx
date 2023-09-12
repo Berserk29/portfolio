@@ -15,7 +15,7 @@ const Canvas = ({hoverNum}) => {
     let canvasCur;
     let context;
     let circleArr;
-
+    
     const circleIntersect = (x1, y1, r1, x2, y2, r2) => {
         // Calculate the distance between the two circles
         let squareDistance = (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2);

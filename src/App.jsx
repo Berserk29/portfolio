@@ -11,7 +11,7 @@ function App() {
   const aboutRef = useRef()
   const projectRef = useRef()
   
-  // INFO MAKE THE REFRESH COMEBACK TO THE BEGINNING
+  // Make the refresh comeback to the top page
   useEffect(() => {
     window.history.scrollRestoration = 'manual';
     window.focus();

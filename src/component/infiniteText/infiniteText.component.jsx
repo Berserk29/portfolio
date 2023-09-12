@@ -1,9 +1,8 @@
-import { TextContainer, Circle, FlexContainer} from "./infiniteText.styled";
-import Typo, { TypoType } from "../typo/typo.component";
+import { TextContainer, Circle, FlexContainer, GiantHeadline} from "./infiniteText.styled";
 import { Fragment } from "react";
 
 
-const InfiniteText = ({textArr, isForward, color = 'var(--color-cream)'}) => {
+const InfiniteText = ({textArr, isForward, color}) => {
     const textNumArr = [1, 2] 
 
 
@@ -14,7 +13,7 @@ const InfiniteText = ({textArr, isForward, color = 'var(--color-cream)'}) => {
                     {  textArr.map((el,i) => (
                         <Fragment key={i}>
                             <Circle color={color}/>
-                            <Typo type={TypoType.GiantHeadline} borderColor={color}>&nbsp;{el}&nbsp;</Typo>
+                            <GiantHeadline borderColor={color}>&nbsp;{el}&nbsp;</GiantHeadline>
                         </Fragment>
                     ))}
                 </TextContainer>

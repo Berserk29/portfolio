@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
@@ -16,7 +16,6 @@ import {
 import Typo, {TypoType} from "../typo/typo.component";
 import InfiniteText from "../infiniteText/infiniteText.component";
 import arrowImg from '../../assets/icon/arrow.png'
-
 
 
 const ProjectCardTouch = ({props, justify}) => {

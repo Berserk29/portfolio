@@ -9,7 +9,7 @@ const teko = css`
     display: inline-block;
 `
 
-const khandBold = css`
+export const khandBold = css`
     font-family: 'Khand';
     font-weight: 700;
     text-transform: uppercase;
@@ -28,28 +28,6 @@ const bebasNeue = css`
 `
 
 // INFO STYLED COMPONENT
-
-export const Headline1B = styled.h1`
-    ${khandBold}
-    font-size: 14rem;
-    color: var(--color-primary);
-    @media ${mediaQuery.styledTablet} {
-        font-size: 12rem;
-    }
-    @media ${mediaQuery.styledSmTablet} {
-        font-size: 10rem;
-    }
-    @media ${mediaQuery.styledMobile} {
-        font-size: 7rem;
-    }
-`
-
-export const Headline1T = styled(Headline1B)`
-    ${khandBold}
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--color-primary);
-`
 
 export const Headline2 = styled.h2`
     ${teko}
@@ -115,14 +93,6 @@ export const Headline5 = styled.h4`
     @media ${mediaQuery.styledSmTablet} {
         font-size: 3.6rem;
     }
-`
-
-export const GiantHeadline = styled.span`
-    ${khandBold}
-    font-size: 24.8rem;
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: ${props => props.borderColor || 'var(--color-cream)'};
 `
 
 export const Text1 = styled.p`

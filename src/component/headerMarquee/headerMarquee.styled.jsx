@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { infiniteAniBackward, infiniteAniForward } from "../../helper/keyframe";
 import mediaQuery from "../../helper/mediaQuery";
+import { khandBold } from "../typo/typo.styled";
 
 export const OverflowContainer = styled.div`
     position: absolute;
@@ -51,4 +52,26 @@ export const Circle = styled.div`
 export const CircleT = styled(Circle)`
     background-color: transparent;
     border: 1px solid var(--color-primary);
+`
+
+export const Headline1B = styled.h1`
+    ${khandBold}
+    font-size: 14rem;
+    color: var(--color-primary);
+    @media ${mediaQuery.styledTablet} {
+        font-size: 12rem;
+    }
+    @media ${mediaQuery.styledSmTablet} {
+        font-size: 10rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        font-size: 7rem;
+    }
+`
+
+export const Headline1T = styled(Headline1B)`
+    ${khandBold}
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-primary);
 `
