@@ -40,7 +40,7 @@ export const canvasArr = [
     },
     {
         x: 0,
-        y: 500,
+        y: 400,
         vx: 60,
         vy: -60,
         logo: htmlLogo,
@@ -94,8 +94,8 @@ export class Circle extends CanvasObject
 
         if (this.icon instanceof Image && this.icon.complete) {
             // You can adjust the position and size of the SVG icon as needed
-            const iconWidth = this.isHover ? 45 : 40;
-            const iconHeight = this.isHover ? 45 : 40;
+            const iconWidth = this.isHover ? 45 : 42;
+            const iconHeight = this.isHover ? 45 : 42;
             this.context.drawImage(this.icon, this.x - iconWidth / 2, this.y - iconHeight / 2, iconWidth, iconHeight);
         }
     }

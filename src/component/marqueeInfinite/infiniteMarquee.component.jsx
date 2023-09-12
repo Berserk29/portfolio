@@ -9,19 +9,18 @@ const InfiniteMarquee = () => {
     
     const typoLine = (colorArr, textArr) => {
         return (
-        <>
-            { circleLogic(colorArr?.[0]) }
-            <Typo type={typeLogic(colorArr?.[0])}>&nbsp;{textArr?.[0]}&nbsp;</Typo> 
-            { circleLogic(colorArr?.[1]) }
-            <Typo type={typeLogic(colorArr?.[1])}>&nbsp;{textArr?.[1]}&nbsp;</Typo>
-            { circleLogic(colorArr?.[2]) }
-            <Typo type={typeLogic(colorArr?.[2])}>&nbsp;{textArr?.[2]}&nbsp;</Typo>
-            { circleLogic(colorArr?.[1]) }
-            <Typo type={typeLogic(colorArr?.[1])}>&nbsp;{textArr?.[1]}&nbsp;</Typo>
-        </>
+            <>
+                { circleLogic(colorArr?.[0]) }
+                <Typo type={typeLogic(colorArr?.[0])}>&nbsp;{textArr?.[0]}&nbsp;</Typo> 
+                { circleLogic(colorArr?.[1]) }
+                <Typo type={typeLogic(colorArr?.[1])}>&nbsp;{textArr?.[1]}&nbsp;</Typo>
+                { circleLogic(colorArr?.[2]) }
+                <Typo type={typeLogic(colorArr?.[2])}>&nbsp;{textArr?.[2]}&nbsp;</Typo>
+                { circleLogic(colorArr?.[1]) }
+                <Typo type={typeLogic(colorArr?.[1])}>&nbsp;{textArr?.[1]}&nbsp;</Typo>
+            </>
         )
     }
-
 
     return (
         <OverflowContainer>

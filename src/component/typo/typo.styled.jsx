@@ -68,6 +68,15 @@ export const Headline3 = styled.h3`
     ${teko}
     font-weight: 600;
     font-size: 5.6rem;
+    @media ${mediaQuery.styledTablet} {
+        font-size: 4.8rem;
+    }
+    @media ${mediaQuery.styledSmTablet} {
+        font-size: 4.2rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        font-size: 3.4rem;
+    }
 `
 
 export const Headline4 = styled.h3`
@@ -185,4 +194,10 @@ export const Text6 = styled.p`
    font-weight: 300;
    font-size: 2.2rem;
    line-height: 100%;
+   @media ${mediaQuery.styledTablet} {
+        font-size: 2rem;
+    }
+    @media ${mediaQuery.styledSmTablet} {
+        font-size: 1.6rem;
+    }
 `

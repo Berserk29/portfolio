@@ -1,8 +1,13 @@
-import { useRef, useEffect, useLayoutEffect } from "react";
+import { useRef, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
+
 import { Circle } from "./canvas.data";
 import { canvasArr } from "./canvas.data";
 
 const Canvas = ({hoverNum}) => {
+    const isTablet = useMediaQuery(mediaQuery.useTablet)
+    const isMobile = useMediaQuery(mediaQuery.useMobile)
     const canvasRef = useRef()
     const hoverNumRef = useRef(hoverNum)
     let secondsPassed = 0;
@@ -129,7 +134,7 @@ const Canvas = ({hoverNum}) => {
     },[canvasArr])
 
     return (
-        <canvas ref={canvasRef} width={600} height={400} style={{border: '1px solid var(--color-primary)'}}/>
+        <canvas ref={canvasRef} id='myCanvas' width={!isTablet ? 600 : 700}  height={!isMobile ? 400 : 500}  style={{border: '1px solid var(--color-primary)'}}/>
     )
 }
 

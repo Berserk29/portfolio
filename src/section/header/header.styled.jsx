@@ -17,8 +17,7 @@ const sameCss = css`
         height: 42rem;
     }
     @media ${mediaQuery.styledMobile} {
-        border-radius: 50%;
-        height: 32rem;
+        height: 28rem;
     }
 ` 
 

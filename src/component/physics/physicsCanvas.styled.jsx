@@ -11,6 +11,12 @@ export const FlexContainer = styled.div`
     @media ${mediaQuery.styledTablet} {
         flex-direction: column-reverse;
     }
+    @media ${mediaQuery.styledSmTablet} {
+        padding: 0 3rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        padding: 0 2rem;
+    }
 `
 
 export const TitleContainer = styled.div`
@@ -18,6 +24,12 @@ export const TitleContainer = styled.div`
     flex-direction: column;
     width: 60rem;
     height: auto;
+    @media ${mediaQuery.styledTablet} {
+        width: 70rem;
+    }
+    @media ${mediaQuery.styledSmTablet} {
+        width: 100%;
+    }
 `
 
 export const TitleCss = styled.div`
@@ -39,8 +51,14 @@ export const TextContainer = styled.div`
     }
     &:hover ${TitleCss} {
         transform: translateX(6rem);
+        @media ${mediaQuery.styledMobile} {
+            transform: translateX(3.5rem);
+        }
     }
     &:hover ${TextCss} {
         transform: translateX(-6rem);
+        @media ${mediaQuery.styledMobile} {
+            transform: translateX(-3.5rem);
+        }
     }
 `
