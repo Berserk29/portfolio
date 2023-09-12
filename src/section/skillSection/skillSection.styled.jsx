@@ -11,14 +11,15 @@ export const SkillContainer = styled.section`
     width: 100%;
     height: auto;
     @media ${mediaQuery.styledTablet} {
+        padding: 12rem 0;
         gap: 8rem;
     }
     @media ${mediaQuery.styledSmTablet} {
-        padding: 8rem 0;
+        padding: 8rem 3rem;
         gap: 7rem;
     }
     @media ${mediaQuery.styledMobile} {
-        padding: 6rem 0;
+        padding: 6rem 2rem;
         gap: 5rem;
     }
 `

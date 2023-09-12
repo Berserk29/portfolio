@@ -17,11 +17,19 @@ export const BtnContainer = styled.div`
         background-color: ${ props => props.isPrimaryColor ? 'var(--color-primary-hover)' : 'var(--color-primary)'};
         border: 1px solid var(--color-cream);
     }
+    @media ${mediaQuery.styledTablet} {
+        margin-top: 3.5rem;
+        max-width: 46rem;
+        padding: 2.6rem 0;
+    }
     @media ${mediaQuery.styledSmTablet} {
         margin-top: 3rem;
-        max-width: 40rem;
+        max-width: 36rem;
+        padding: 2.2rem 0;
     }
     @media ${mediaQuery.styledMobile} {
         margin-top: 1rem;
+        max-width: 28rem;
+        padding: 2rem 0;
     }
 `

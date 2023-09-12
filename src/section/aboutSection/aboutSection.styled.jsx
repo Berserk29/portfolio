@@ -5,19 +5,22 @@ export const AboutContainer = styled.section`
     display: flex;
     align-items: center;
     text-align: center;
-    gap: 8rem;
     flex-direction: column;
     width: 100%;
     height: auto;
     background-color: var(--color-cream);
-    padding: 6rem 4rem 16rem 4rem;
+    padding: 4rem 4rem 16rem 4rem;
+    gap: 8rem;
+    @media ${mediaQuery.styledTablet} {
+        padding: 2rem 3rem 12rem 3rem;
+    }
     @media ${mediaQuery.styledSmTablet} {
-        padding: 6rem 2rem 8rem 2rem;
+        padding: 0rem 3rem 8rem 3rem;
         gap: 7rem;
     }
     @media ${mediaQuery.styledMobile} {
-        gap: 5rem;
         padding: 0 2rem 6rem 2rem;
+        gap: 5rem;
     }
 `
 

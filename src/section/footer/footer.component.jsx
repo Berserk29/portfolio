@@ -11,6 +11,7 @@ import resume from '../../assets/resume/OlivierTrudeau_resume.pdf'
 
 const Footer = forwardRef(({props},ref) => {
     const isTablet = useMediaQuery(mediaQuery.useTablet)
+    const isSmTablet = useMediaQuery(mediaQuery.useSmTablet)
 
     const scrollToHandler = (ref) => {
         if(ref && ref.current)
@@ -19,9 +20,11 @@ const Footer = forwardRef(({props},ref) => {
 
     return (
         <FooterContainer>
-            <FlexContainer justify='flex-start'>
-                <Typo type={TypoType.Headline5}>Olivier Trudeau</Typo>
-            </FlexContainer>
+            {   !isSmTablet &&
+                <FlexContainer justify='flex-start'>
+                    <Typo type={TypoType.Headline5}>Olivier Trudeau</Typo>
+                </FlexContainer> 
+            } 
             <LinkContainer>
                 {linkArr.map((el,i) => (
                     <div key={i} onClick={() => scrollToHandler(ref?.[i])}>

@@ -9,8 +9,13 @@ export const EmailContainer = styled.section`
     gap: 6rem;
     padding: 16rem 8rem 12rem 8rem;
     background-color: var(--color-primary);
+    @media ${mediaQuery.styledTablet} {
+        padding: 12rem 3rem;
+        gap: 5rem;
+    }
     @media ${mediaQuery.styledSmTablet} {
-        padding: 8rem 3rem;
+        padding: 8rem 4rem;
+        gap: 3.5rem;
     }
     @media ${mediaQuery.styledMobile} {
         padding: 6rem 3rem;

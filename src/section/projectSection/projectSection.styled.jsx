@@ -8,6 +8,9 @@ export const ProjectContainer = styled.section`
     gap: 8.6rem;
     padding: 14.5rem 0 16rem 0;
     background-color: var(--color-primary);
+    @media ${mediaQuery.styledTablet} {
+        padding: 12rem 0;
+    }
     @media ${mediaQuery.styledSmTablet} {
         padding: 8rem 0;
         gap: 5rem;

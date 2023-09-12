@@ -11,10 +11,9 @@ export const FooterContainer = styled.footer`
         padding: 5rem 8rem;
     }
     @media ${mediaQuery.styledSmTablet} {
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
         padding: 4rem;
-        gap: 4rem;
     }
 `
 
@@ -26,6 +25,8 @@ export const LinkContainer = styled.div`
         width: 100%;
         max-width: 40rem;
         justify-content: space-between;
+        margin-bottom: 0;
+        margin-top: .8rem;
     }
 `
 

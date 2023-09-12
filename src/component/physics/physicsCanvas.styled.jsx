@@ -11,12 +11,6 @@ export const FlexContainer = styled.div`
     @media ${mediaQuery.styledTablet} {
         flex-direction: column-reverse;
     }
-    @media ${mediaQuery.styledSmTablet} {
-        padding: 0 3rem;
-    }
-    @media ${mediaQuery.styledMobile} {
-        padding: 0 2rem;
-    }
 `
 
 export const TitleContainer = styled.div`
