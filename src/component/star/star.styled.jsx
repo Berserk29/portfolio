@@ -14,10 +14,13 @@ export const StarCss = styled.img`
     animation: ${starAni} 6s infinite;
     animation-delay: ${props => props.delay}s;
 
+    @media ${mediaQuery.styledTablet} {
+        width: ${props => props.width * 0.78}rem;
+    }
     @media ${mediaQuery.styledSmTablet} {
-        width: ${props => props.width * 0.7}rem;
+        width: ${props => props.width * 0.62}rem;
     }
     @media ${mediaQuery.styledMobile} {
-        width: ${props => props.width * 0.55}rem;
+        width: ${props => props.width * 0.47}rem;
     }
 `

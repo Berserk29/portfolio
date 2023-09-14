@@ -33,12 +33,12 @@ const ProjectCardTouch = ({props, justify}) => {
     }
 
     return (
-        <Container justify={justify} onClick={() => console.log('testing')}>
+        <Container justify={justify}>
             {!isSmTablet ? <InfiniteText textArr={textMarqueeArr} isForward={isMarqueeForward} /> : null}
             <CardContainer onClick={clickHandler}>
                 <CardImg image={image} style={{transform: logicRotate(-180, 0)}}/>
                 <BackCard style={{transform: logicRotate(0, 180)}} justify={justify}>
-                    <Typo type={TypoType.Headline4} color={justify === 'flex-start' ? 'var(--color-primary)' : 'var(--color-cream)'} >Click to see my project</Typo>
+                    <Typo type={TypoType.Headline4} color={justify === 'flex-start' ? 'var(--color-primary)' : 'var(--color-cream)'} >Click here to see my project</Typo>
                     <BtnContainer target="_blank" href={link} justify={justify}>
                         <ArrowImg src={arrowImg} alt="arrow icon" justify={justify}/>
                     </BtnContainer>

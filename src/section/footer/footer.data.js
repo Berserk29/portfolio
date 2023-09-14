@@ -1,3 +1,5 @@
+import resumePath from '../../assets/resume/Olivier_Trudeau_resume.pdf'
+
 export const linkArr = [
     {
         text: 'work',
@@ -5,7 +7,7 @@ export const linkArr = [
     },
     {
         text: 'resume',
-        link: null
+        link: resumePath
     },
     {
         text: 'about',

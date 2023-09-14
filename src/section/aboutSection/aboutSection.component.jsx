@@ -3,18 +3,18 @@ import { forwardRef } from "react";
 import Typo, { TypoType } from "../../component/typo/typo.component";
 import { AboutContainer, TextContainer } from "./aboutSection.styled";
 
-import { aboutText } from "./aboutSection.data";
 import TitleStars from "../../component/titleStars/titleStars.component";
+import { useTranslation } from "react-i18next";
 
 const AboutSection = forwardRef(({props}, ref) => {
-    const {introUp, introDown} = aboutText;
+    const {t} = useTranslation();
 
     return (
         <AboutContainer ref={ref}>
-            <TitleStars title='About me'/>
+            <TitleStars title={t('titleAboutMe')}/>
             <TextContainer>
-                <Typo type={TypoType.Headline4}>{introUp}</Typo>
-                <Typo type={TypoType.Text1}>{introDown}</Typo> 
+                <Typo type={TypoType.Headline4}>{t('introUp')}</Typo>
+                <Typo type={TypoType.Text1}>{t('introDown')}</Typo>
             </TextContainer>
         </AboutContainer>
     )

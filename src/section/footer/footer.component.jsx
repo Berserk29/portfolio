@@ -6,10 +6,12 @@ import mediaQuery from "../../helper/mediaQuery";
 
 import { circleArr, linkArr } from "./footer.data";
 import { forwardRef } from "react";
-import resume from '../../assets/resume/OlivierTrudeau_resume.pdf'
 
+import resumePath from '../../assets/resume/Olivier_Trudeau_resume.pdf'
+import { useTranslation } from "react-i18next";
 
 const Footer = forwardRef(({props},ref) => {
+    const {t} = useTranslation()
     const isTablet = useMediaQuery(mediaQuery.useTablet)
     const isSmTablet = useMediaQuery(mediaQuery.useSmTablet)
 
@@ -27,15 +29,16 @@ const Footer = forwardRef(({props},ref) => {
             } 
             <LinkContainer>
                     {linkArr.map((el,i) => (
-                        el === 'resume' ?
-                        <ResumeLink key={i} href={resume} download={'Olivier_Trudeau_Resume'}>
-                            <Typo type={TypoType.Text5} color="var(--color-black)" >{el.text}</Typo>
-                        </ResumeLink>
-                            :
-                        <div key={i} onClick={() => scrollToHandler(ref[el.link])}>
-                            <Typo  type={TypoType.Text5} color="var(--color-black)">{el.text}</Typo>
-                        </div>    
-                    ))}    
+                        el.text === 'resume' ? (
+                            <ResumeLink key={i} href={resumePath} download>
+                                <Typo type={TypoType.Text5} color="var(--color-black)" >{t(el.text)}</Typo>
+                            </ResumeLink>
+                        ) : (
+                            <div key={i} onClick={() => scrollToHandler(ref[el.link])}>
+                                <Typo  type={TypoType.Text5} color="var(--color-black)">{t(el.text)}</Typo>
+                            </div>    
+                        )
+                    ))} 
             </LinkContainer>
             {   !isTablet &&
                 <FlexContainer justify='flex-end'>

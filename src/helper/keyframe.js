@@ -1,5 +1,4 @@
 import { keyframes } from "styled-components";
-import mediaQuery from "./mediaQuery";
 
 export const movingUpText = keyframes`
     from{ transform: translate(0,0); }
@@ -62,11 +61,11 @@ export const circleAniMobile = keyframes`
     }
 `
 
-export const nameContainerAni = (scale = 1.4) => keyframes`
-    0% {
+export const nameAnimation = (scale = 1.3) => keyframes`
+    0% { 
         transform: translate(-50%, 42vh) scale(scale);
     }
-    100% {
+    100% { 
         transform: translate(-50%, 0) scale(1);
     }
 `
@@ -92,21 +91,26 @@ export const letterCircleAni = keyframes`
 `
 
 export const starAni = keyframes`
-    0%, 10% { opacity: 1}
-    15% { opacity: 0.5 }
-    25%,40% { opacity: 1 }
-    45% { opacity: 0.3 }
-    55%,80% { opacity: 1 }
-    85% { opacity: 0.2 }
-    90%,100% {opacity: 1}
+    0%, 10% { opacity: 1;}
+    15% { opacity: 0.5;}
+    25%,40% { opacity: 1;}
+    45% { opacity: 0.3;}
+    55%,80% { opacity: 1;}
+    85% { opacity: 0.2;}
+    90%,100% {opacity: 1;}
 `
 
 export const infiniteAniBackward = keyframes`
-    from {transform: translateX(0)}
-    to {transform: translateX(-100%)}
+    from {transform: translateX(0);}
+    to {transform: translateX(-100%);}
 `
 
 export const infiniteAniForward = keyframes`
-    from {transform: translateX(0)}
-    to {transform: translateX(100%)}
+    from {transform: translateX(0);}
+    to {transform: translateX(100%);}
+`
+
+export const opacityAni = keyframes`
+    from {opacity: 0;}
+    to {opacity: 1;}
 `

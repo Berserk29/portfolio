@@ -10,11 +10,12 @@ const sameCss = css`
     aspect-ratio: 1.65 / 1;
     @media ${mediaQuery.styledTablet} {
         aspect-ratio: 1.25 / 1;
+        height: 45rem;
     }
     @media ${mediaQuery.styledSmTablet} {
         aspect-ratio: 1 / 1;
         border-radius: 50%;
-        height: 42rem;
+        height: 38rem;
     }
     @media ${mediaQuery.styledMobile} {
         height: 28rem;

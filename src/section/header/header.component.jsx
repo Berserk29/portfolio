@@ -9,6 +9,7 @@ import {
 
 import HeaderName from "../../component/headerName/headerName.component";
 import HeaderMarquee from "../../component/headerMarquee/headerMarquee.component";
+import ButtonLng from "../../component/buttonLng/buttonLng.component";
 import headingImg from "../../assets/image/main_01.jpg"
 
 
@@ -43,6 +44,7 @@ const Header = () => {
         <> 
             { !endAnimation ? <Container><AnimationContainer/></Container> : null }
             <ContainerBelow changeColor={animationOn} >
+                <ButtonLng />
                 <HeaderName />
                 <HeaderImg src={headingImg} endAni={endAnimation}/>
                 <HeaderMarquee />

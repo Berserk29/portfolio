@@ -1,22 +1,23 @@
 import styled from "styled-components";
-import { letterAni, nameContainerAni, letterCircleAni} from "../../helper/keyframe";
+import { letterAni, nameAnimation, letterCircleAni} from "../../helper/keyframe";
 import mediaQuery from "../../helper/mediaQuery";
 
 export const NameContainer = styled.div`
     position: absolute;
-    width: auto;
-    top: 5vh;
+    width: 18.9rem;
+    top: 5%;
     left: 50%;
-    z-index: 3;
-    transform: translate(-50%, 42vh) scale(1.4); 
-    animation: ${nameContainerAni} .5s forwards 2.9s;
-    @media ${mediaQuery.styledSmTablet} {
+    z-index: 10;
+    transform: translate(-50%, 42vh) scale(1.3); 
+    animation: ${nameAnimation} .5s forwards 2.9s;
+    @media ${mediaQuery.styledTablet} {
+        width: 15.7rem;
         transform: translate(-50%, 42vh) scale(1.2);
-        animation: ${nameContainerAni(1.2)} .5s forwards 2.9s;
+        animation: ${nameAnimation(1.2)} .5s forwards 2.9s;
     }
-    @media ${mediaQuery.styledMobile} {
+    @media ${mediaQuery.styledSmTablet} {
         transform: translate(-50%, 42vh) scale(0.8);
-        animation: ${nameContainerAni(.8)} .5s forwards 2.9s;
+        animation: ${nameAnimation(0.8)} .5s forwards 2.9s;
     }
 `
 
