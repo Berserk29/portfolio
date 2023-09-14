@@ -8,8 +8,16 @@ export const FlexContainer = styled.div`
     align-items: center;
     gap: 5rem;
     max-width: 1400px;
+    padding: 10rem 0 16rem;
     @media ${mediaQuery.styledTablet} {
         flex-direction: column-reverse;
+        padding: 8rem 0 12rem;
+    }
+    @media ${mediaQuery.styledSmTablet} {
+        padding: 7rem 0 8rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        padding: 5rem 0 6rem;
     }
 `
 
