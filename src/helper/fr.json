@@ -5,5 +5,10 @@
     "titleAboutMe": "profil",
     "introUp": "Salut! Je m'appelle Olivier Trudeau, un développeur front-end passionné qui croit en l'importance de toujours apprendre. J’aime les défis et j’adore transformer des concepts créatifs en expériences vivantes et interactives.",
     "introDown": "Quand je ne suis pas immergé dans la programmation, j'aime explorer de nouveaux endroits en voyageant, construire de nouvelles choses, et même m'essayer aux échecs (bien que j'admette avoir besoin d'un peu d'entraînement).",
-    "project" : "projet"
+    "project" : "projet",
+    "skills" : "compétences",
+    "clickHere" : "cliquez ici pour voir mon projet",
+    "getInTouch" : "entrez en contact",
+    "emailText" : "Je suis actuellement en train d'explorer de nouvelles opportunités, et si mon travail correspond à vos intérêts, j'aimerais beaucoup planifier une réunion Zoom pour discuter de collaborations potentielles autour d'une tasse de thé.",
+    "sendEmail" : "envoie-moi un email"
 }

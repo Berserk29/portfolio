@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
@@ -9,11 +10,12 @@ import ProjectCardTouch from "../../component/projectCardTouch/projectCardTouch.
 import { projectCardArr } from "./projectSection.data";
 
 const ProjectSection = forwardRef(({props}, ref) => {
+    const {t} = useTranslation()
     const isTablet = useMediaQuery(mediaQuery.useTablet)
     const hasTouchscreen = navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
     return (
         <ProjectContainer ref={ref}>
-            <Typo type={TypoType.Headline2} color="var(--color-cream)">Project</Typo>
+            <Typo type={TypoType.Headline2} color="var(--color-cream)">{t('project')}</Typo>
             <CardContainer>
                 {projectCardArr.map((el,i) => (
                     isTablet || hasTouchscreen ?

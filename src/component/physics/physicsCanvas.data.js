@@ -17,7 +17,7 @@ export const titleArr = [
     {
         id: 3,
         title: 'CSS',
-        text: 'display: flex;'
+        text: 'display: flex'
     },
     {
         id: 4,

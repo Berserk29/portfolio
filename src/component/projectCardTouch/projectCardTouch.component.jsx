@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import { useTranslation } from "react-i18next";
 import mediaQuery from "../../helper/mediaQuery";
 
 import { 
@@ -19,6 +20,7 @@ import arrowImg from '../../assets/icon/arrow.png'
 
 
 const ProjectCardTouch = ({props, justify}) => {
+    const {t} = useTranslation()
     const { image, projectName, description, time, textMarqueeArr, isMarqueeForward, link} = props;
     const isSmTablet = useMediaQuery(mediaQuery.useSmTablet)
     const [isRotate , setIsRotate] = useState(false)
@@ -38,7 +40,7 @@ const ProjectCardTouch = ({props, justify}) => {
             <CardContainer onClick={clickHandler}>
                 <CardImg image={image} style={{transform: logicRotate(-180, 0)}}/>
                 <BackCard style={{transform: logicRotate(0, 180)}} justify={justify}>
-                    <Typo type={TypoType.Headline4} color={justify === 'flex-start' ? 'var(--color-primary)' : 'var(--color-cream)'} >Click here to see my project</Typo>
+                    <Typo type={TypoType.Headline4} color={justify === 'flex-start' ? 'var(--color-primary)' : 'var(--color-cream)'} >{t('clickHere')}</Typo>
                     <BtnContainer target="_blank" href={link} justify={justify}>
                         <ArrowImg src={arrowImg} alt="arrow icon" justify={justify}/>
                     </BtnContainer>

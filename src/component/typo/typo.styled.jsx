@@ -72,7 +72,7 @@ export const Headline4 = styled.h3`
         font-size: 3.4rem;
     }
     @media ${mediaQuery.styledMobile} {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
 `
 

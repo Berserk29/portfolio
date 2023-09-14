@@ -1,16 +1,18 @@
 import { EmailContainer, TextContainer } from './emailSection.styled';
+import { useTranslation } from 'react-i18next';
 
 import Typo, { TypoType } from '../../component/typo/typo.component'
 import EmailBtn from '../../component/emailBtn/emailBtn.component';
 
 const EmailSection = () => {
+    const {t} = useTranslation()
     return (
         <EmailContainer>
-            <Typo type={TypoType.Headline2} color='var(--color-cream)'>Get in touch</Typo>
+            <Typo type={TypoType.Headline2} color='var(--color-cream)'>{t('getInTouch')}</Typo>
             <TextContainer>
-                <Typo type={TypoType.Text2} color='var(--color-cream)'>I am currently exploring new opportunities, and if my work aligns with your interests, I would love to schedule a Zoom meeting to discuss potential collaborations over a cup of tea.</Typo>
+                <Typo type={TypoType.Text2} color='var(--color-cream)'>{t('emailText')}</Typo>
             </TextContainer>
-            <EmailBtn isPrimaryColor={true} >Send me an email</EmailBtn>
+            <EmailBtn isPrimaryColor={true} >{t('sendEmail')}</EmailBtn>
         </EmailContainer>
     )
 }

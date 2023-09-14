@@ -5,5 +5,10 @@
     "titleAboutMe": "about me",
     "introUp": "Hello! I'm Olivier Trudeau, a passionate front-end developer who believes in the importance of always learning. I thrive on challenges and love turning creative concepts into living, interactive experiences.",
     "introDown": "When I'm not immersed in coding, I enjoy exploring new places through travel, building new things, and even trying my hand at chess \n (though I confess I could use some practice).",
-    "project" : "project"
+    "project" : "project",
+    "skills" : "skills",
+    "clickHere" : "click here to see my project",
+    "getInTouch" : "get in touch",
+    "emailText" : "I am currently exploring new opportunities, and if my work aligns with your interests, I would love to schedule a Zoom meeting to discuss potential collaborations over a cup of tea.",
+    "sendEmail" : "send me an email"
 }

@@ -91,6 +91,10 @@ export const ArrowImg = styled.img`
     height: 2.5rem;
     transition: filter .6s ease-out;
     filter: ${ props => props.justify === 'flex-start' ? 'var(--filter-primary)' : 'var(--filter-cream)'};
+    @media ${mediaQuery.styledMobile} {
+        width: 2rem;
+        height: 2rem;
+    }
 `
 
 export const BtnContainer = styled.a`
@@ -108,5 +112,9 @@ export const BtnContainer = styled.a`
         ${ArrowImg}{
             filter: ${ props => props.justify === 'flex-start' ?  'var(--filter-cream)' : 'var(--filter-primary)'};
         }
+    }
+    @media ${mediaQuery.styledMobile} {
+        width: 6.5rem;
+        height: 6.5rem;
     }
 `
