@@ -1,8 +1,8 @@
-import reactLogo from '../../assets/icon/react-icon.png'
-import jsLogo from '../../assets/icon/js-icon.png'
-import styledLogo from '../../assets/icon/styled-icon.png'
-import cssLogo from '../../assets/icon/css-icon.png'
-import htmlLogo from '../../assets/icon/html-icon.png'
+import reactLogo from '../../assets/icon/react_icon.svg'
+import jsLogo from '../../assets/icon/js_icon.svg'
+import styledLogo from '../../assets/icon/styled_icon.svg'
+import cssLogo from '../../assets/icon/css_icon.svg'
+import htmlLogo from '../../assets/icon/html_icon.svg'
 
 
 export const canvasArr = [

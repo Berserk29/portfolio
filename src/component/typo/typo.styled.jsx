@@ -33,12 +33,12 @@ export const Headline2 = styled.h2`
     ${teko}
     line-height: 90%;
     font-weight: 600;
-    font-size: 9.6rem;
+    font-size: 8rem;
     @media ${mediaQuery.styledTablet} {
-        font-size: 7.5rem;
+        font-size: 6.5rem;
     }
     @media ${mediaQuery.styledSmTablet} {
-        font-size: 6rem;
+        font-size: 5.6rem;
     }
     @media ${mediaQuery.styledMobile} {
         font-size: 4.5rem;

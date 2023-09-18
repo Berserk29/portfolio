@@ -16,18 +16,14 @@ export const TitleContainer = styled.div`
    align-items: center;
    justify-content: center;
 
-   padding: 4.4rem 7.2rem 2.6rem 7.2rem;
-   margin: 8.8rem 9.3rem 0 7.6rem;
+   padding: 3.8rem 8rem 2.1rem 8rem;
    @media ${mediaQuery.styledTablet} {
-        padding: 3.4rem 5.6rem 2rem 5.6rem;
-        margin: 6.8rem 7.2rem 0 5.9rem;
+        padding: 2.75rem 6.5rem 1.7rem 6.5rem;
    }
    @media ${mediaQuery.styledSmTablet} {
-        padding: 2.7rem 4.4rem 1.6rem 4.4rem;
-        margin: 6rem 5.7rem 0 4.8rem;
+        padding: 2.6rem 5.4rem 1.4rem 5.4rem;
    }
    @media ${mediaQuery.styledMobile} {
-        padding: 2.5rem 4rem 1.5rem 4rem;
-        margin: 5.2rem 3.2rem 0 3.2rem;
+        padding: 2.1rem 4.5rem 1.2rem 4.5rem;
    }
 `

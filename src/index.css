@@ -1,16 +1,13 @@
 :root {
-  --color-primary: #568ab8;
-  --color-primary: #8E95D2;
-  --color-primary: #9A8CC0;
   --color-primary: #719EC7;
 
   
   --color-grey: #555;
-  --color-primary-hover: rgb(69, 105, 137);
-  --color-cream: rgb(245, 241, 234);
-  --color-black: rgb(51, 51, 51);
-  --color-cream-opa50: rgba(253, 250, 243, 0.5);
-  --color-cream-opa10: rgba(245, 241, 234, .1);
+  --color-primary-hover: #456989;
+  --color-cream: #f8f0e4;
+  --color-black: #333333;
+  --color-cream-opa50: #f8f0e480;
+  --color-cream-opa10: #f8f8e41a;
   
   --bg-gradiant-1: linear-gradient(180deg, #F5F1EA 34.38%, rgba(245, 241, 234, 0.10) 75.52%, rgba(245, 241, 234, 0.00) 99.98%, rgba(102, 102, 102, 0.00) 99.99%, rgba(245, 241, 234, 0.00) 100%);
   --bg-gradiant-card-1: linear-gradient(to right bottom, var(--color-cream), var(--color-primary)); 
