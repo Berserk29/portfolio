@@ -45,7 +45,7 @@ const Header = () => {
             { !endAnimation ? <Container><AnimationContainer/></Container> : null }
             <ContainerBelow changeColor={animationOn} >
                 <ButtonLng />
-                <HeaderName />
+                <HeaderName/>
                 <HeaderImg src={headingImg} endAni={endAnimation}/>
                 <HeaderMarquee />
             </ContainerBelow>

@@ -99,15 +99,15 @@ export const Headline5 = styled.h4`
 
 export const Text1 = styled.p`
    ${heebo}
-   font-weight: 400;
+   font-weight: 500;
    font-size: 2.2rem;
    line-height: 160%;
    white-space: pre-line;
    @media ${mediaQuery.styledTablet} {
-    font-size: 2.2rem ;
+    font-size: 2rem ;
    }
    @media ${mediaQuery.styledSmTablet} {
-    font-size: 2rem ;
+    font-size: 1.8rem ;
    }
    @media ${mediaQuery.styledMobile} {
     font-size: 1.6rem ;
