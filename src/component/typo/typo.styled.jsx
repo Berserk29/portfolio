@@ -65,6 +65,8 @@ export const Headline4 = styled.h3`
     font-weight: 500;
     font-size: 5.6rem;
     line-height: 130%;
+    white-space: pre-line;
+
     @media ${mediaQuery.styledTablet} {
         font-size: 4.2rem;
     }
@@ -97,8 +99,8 @@ export const Headline5 = styled.h4`
 
 export const Text1 = styled.p`
    ${heebo}
-   font-weight: 700;
-   font-size: 2.6rem;
+   font-weight: 400;
+   font-size: 2.2rem;
    line-height: 160%;
    white-space: pre-line;
    @media ${mediaQuery.styledTablet} {

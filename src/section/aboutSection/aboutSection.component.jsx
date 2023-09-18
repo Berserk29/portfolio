@@ -13,8 +13,8 @@ const AboutSection = forwardRef(({props}, ref) => {
         <AboutContainer ref={ref}>
             <TitleStars title={t('titleAboutMe')}/>
             <TextContainer>
-                <Typo type={TypoType.Headline4}>{t('introUp')}</Typo>
-                <Typo type={TypoType.Text1}>{t('introDown')}</Typo>
+                <Typo type={TypoType.Headline4} color='var(--color-grey)'>{t('introUp')}</Typo>
+                <Typo type={TypoType.Text1} color='var(--color-grey)'>{t('introDown')}</Typo>
             </TextContainer>
         </AboutContainer>
     )
