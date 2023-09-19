@@ -18,8 +18,8 @@ export const Container = styled.div`
 
 export const CardContainer = styled.div`
     transform-style: preserve-3d;
-    width: 100rem;
-    height: 66rem;
+    width: 104.8rem;
+    height: 60rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -27,8 +27,8 @@ export const CardContainer = styled.div`
 `
 
 export const CardImg = styled.div`
-    width: 83.2rem;
-    height: 54.5rem;
+    width: 76rem;
+    height: 49.8rem;
     cursor: pointer;
     background-image: url(${props => props.image});
     background-position: center;
@@ -42,11 +42,11 @@ export const CardImg = styled.div`
 export const TextContainer = styled.div`
     display: flex;
     transition: transform .4s ease-out;
-    width: 83.2rem;
+    width: 76rem;
     justify-content: space-between;
     align-items: flex-end;
     padding: 3.2rem 0rem 2.6rem 0rem;
-    margin: 0 8.3rem;
+    margin: 0 14.4rem;
     border-top: 1px solid var(--color-cream);
     border-bottom: 1px solid var(--color-cream);
 `

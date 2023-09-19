@@ -13,7 +13,7 @@
   --bg-gradiant-card-1: linear-gradient(to right bottom, var(--color-cream), var(--color-primary)); 
   --bg-gradiant-card-2: linear-gradient(to right bottom, var(--color-primary), var(--color-cream));; 
 
-  --filter-primary: invert(46%) sepia(74%) saturate(312%) hue-rotate(166deg) brightness(96%) contrast(85%);
+  --filter-primary: invert(62%) sepia(84%) saturate(212%) hue-rotate(168deg) brightness(83%) contrast(86%);
   
   --box-shadow-start:
   0 0 0 160px var(--color-primary),

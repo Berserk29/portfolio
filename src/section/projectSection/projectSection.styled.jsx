@@ -5,7 +5,7 @@ export const ProjectContainer = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8.6rem;
+    gap: 6.4rem;
     padding: 14.5rem 0 16rem 0;
     background-color: var(--color-primary);
     @media ${mediaQuery.styledTablet} {
@@ -24,7 +24,7 @@ export const CardContainer = styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;
-    gap: 12rem;
+    gap: 11rem;
     @media ${mediaQuery.styledMobile} {
         gap: 8rem;
     }

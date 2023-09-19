@@ -78,12 +78,20 @@ export const Headline4 = styled.h3`
     }
 `
 
-export const Headline4P = styled(Headline4)`
-    line-height: 4rem;
+export const Headline4P = styled.h4`
+    ${teko}
+    font-weight: 500;
+    font-size: 4.8rem;
+    line-height: 3.5rem;
     @media ${mediaQuery.styledTablet} {
+        font-size: 4.2rem;
         line-height: 3rem;
     }
+    @media ${mediaQuery.styledSmTablet} {
+        font-size: 3.4rem;
+    }
     @media ${mediaQuery.styledMobile} {
+        font-size: 2.6rem;
         line-height: 2.3rem;
     }
 `

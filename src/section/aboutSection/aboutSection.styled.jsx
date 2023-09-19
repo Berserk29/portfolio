@@ -12,7 +12,7 @@ export const AboutContainer = styled.section`
     padding: 4rem 4rem 16rem 4rem;
     gap: 8rem;
     @media ${mediaQuery.styledTablet} {
-        padding: 2rem 3rem 12rem 3rem;
+        padding: 0rem 3rem 12rem 3rem;
         gap: 6rem;
     }
     @media ${mediaQuery.styledSmTablet} {
