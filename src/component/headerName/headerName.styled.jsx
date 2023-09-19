@@ -14,14 +14,16 @@ export const NameContainer = styled.div`
         top: var(--top-tablet);
         width: 15.7rem;
         transform: translate(-50%, 40vh) scale(1.2);
-        animation: ${nameAnimation(1.2)} .5s forwards 2.9s;
+        animation: ${nameAnimation('40vh', 1.2)} .5s forwards 2.9s;
     }
     @media ${mediaQuery.styledSmTablet} {
         top: var(--top-smTablet);
-        transform: translate(-50%, 40vh) scale(0.8);
-        animation: ${nameAnimation(0.8)} .5s forwards 2.9s;
+        transform: translate(-50%, 38vh) scale(0.8);
+        animation: ${nameAnimation('38vh', 0.8)} .5s forwards 2.9s;
     }
     @media ${mediaQuery.styledMobile} {
+        transform: translate(-50%, 36vh) scale(0.8);
+        animation: ${nameAnimation('36vh', 0.8)} .5s forwards 2.9s;
         top: var(--top-mobile);
     }
 `

@@ -61,9 +61,9 @@ export const circleAniMobile = keyframes`
     }
 `
 
-export const nameAnimation = (scale = 1.3) => keyframes`
+export const nameAnimation = (translate = '42vh' ,scale = 1.3) => keyframes`
     0% { 
-        transform: translate(-50%, 42vh) scale(scale);
+        transform: translate(-50%, translate) scale(scale);
     }
     100% { 
         transform: translate(-50%, 0) scale(1);
