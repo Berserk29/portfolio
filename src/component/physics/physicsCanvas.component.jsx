@@ -15,10 +15,10 @@ const PhysicsCanvas = () => {
     return (
         <FlexContainer ref={ref}>
             <TitleContainer>
-                {titleArr.map((el) => {
+                {titleArr.map((el,i) => {
                     return (
                         <TextContainer key={el.id} onMouseEnter={() => setHandler(el.id)} onMouseLeave={() => setHandler(-1)}>
-                            <TitleCss><Typo type={TypoType.Headline3}>{el.title}</Typo></TitleCss>
+                            <TitleCss><Typo type={TypoType.Headline3} color={i === hoverNum ? el.color : 'var(--color-primary)'} >{el.title}</Typo></TitleCss>
                             <TextCss><Typo type={TypoType.Text6}>{el.text}</Typo></TextCss>
                         </TextContainer>
                     )

@@ -1,11 +1,14 @@
 :root {
-  --color-primary: #719EC7;
+  /* --color-primary: #719EC7; */
   --color-primary: #9A8CC0;
 
+  /* --color-primary-hover: #456989; */
+  --color-primary-hover: #796C9B;
 
-  
+  /* --filter-primary: invert(62%) sepia(84%) saturate(212%) hue-rotate(168deg) brightness(83%) contrast(86%); */
+  --filter-primary: invert(65%) sepia(30%) saturate(392%) hue-rotate(215deg) brightness(85%) contrast(90%);
+
   --color-grey: #555;
-  --color-primary-hover: #456989;
   --color-cream: #f8f0e4;
   --color-black: #333333;
   --color-cream-opa50: #f8f0e480;
@@ -15,8 +18,13 @@
   --bg-gradiant-card-1: linear-gradient(to right bottom, var(--color-cream), var(--color-primary)); 
   --bg-gradiant-card-2: linear-gradient(to right bottom, var(--color-primary), var(--color-cream));; 
 
-  --filter-primary: invert(62%) sepia(84%) saturate(212%) hue-rotate(168deg) brightness(83%) contrast(86%);
-  
+  /* To calcul between the top of the page and the picture */
+  /* Take half the screen -> (50vh) half picture -> (250px) + name -> (68px) */
+  --top-pc: calc((50vh - 318px) / 2 );
+  --top-tablet: calc((50vh - 280px) / 2 );
+  --top-smTablet: calc((50vh - 245px) / 2 );
+  --top-mobile: calc((50vh - 195px) / 2 );
+
   --box-shadow-start:
   0 0 0 160px var(--color-primary),
   0 0 0 165px var(--color-cream),

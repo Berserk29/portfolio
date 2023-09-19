@@ -1,4 +1,3 @@
-
 import reactLogo from '../../assets/icon/react-icon.png'
 import jsLogo from '../../assets/icon/js-icon.png'
 import styledLogo from '../../assets/icon/styled-icon.png'
@@ -101,8 +100,8 @@ export class Circle extends CanvasObject
 
         if (this.icon instanceof Image && this.icon.complete) {
             // You can adjust the position and size of the SVG icon as needed
-            const iconWidth = 82;
-            const iconHeight = 82;
+            const iconWidth = this.isHover ? 90 : 82;
+            const iconHeight = this.isHover ? 90 : 82;
             this.context.drawImage(this.icon, this.x - iconWidth / 2, this.y - iconHeight / 2, iconWidth, iconHeight);
         }
     }

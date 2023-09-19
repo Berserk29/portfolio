@@ -5,19 +5,24 @@ import mediaQuery from "../../helper/mediaQuery";
 export const NameContainer = styled.div`
     position: absolute;
     width: 18.9rem;
-    top: 5%;
+    top: var(--top-pc);
     left: 50%;
     z-index: 10;
     transform: translate(-50%, 42vh) scale(1.3); 
     animation: ${nameAnimation} .5s forwards 2.9s;
     @media ${mediaQuery.styledTablet} {
+        top: var(--top-tablet);
         width: 15.7rem;
-        transform: translate(-50%, 42vh) scale(1.2);
+        transform: translate(-50%, 40vh) scale(1.2);
         animation: ${nameAnimation(1.2)} .5s forwards 2.9s;
     }
     @media ${mediaQuery.styledSmTablet} {
-        transform: translate(-50%, 42vh) scale(0.8);
+        top: var(--top-smTablet);
+        transform: translate(-50%, 40vh) scale(0.8);
         animation: ${nameAnimation(0.8)} .5s forwards 2.9s;
+    }
+    @media ${mediaQuery.styledMobile} {
+        top: var(--top-mobile);
     }
 `
 

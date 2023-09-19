@@ -2,11 +2,12 @@ import styled, {css} from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
 // INFO CSS
-const teko = css`
+export const teko = css`
     font-family: 'Teko';
     color: ${props => props.color};
     text-transform: uppercase;
     display: inline-block;
+    transition: color .3s;
 `
 
 export const khandBold = css`
@@ -20,11 +21,13 @@ export const khandBold = css`
 const heebo = css`
     font-family: 'Heebo';
     color: ${props => props.color};
+    transition: color .3s;
 `
 
 const bebasNeue = css`
     font-family: 'Bebas Neue';
     color: ${props => props.color};
+    transition: color .3s;
 `
 
 // INFO STYLED COMPONENT
@@ -107,7 +110,7 @@ export const Headline5 = styled.h4`
 
 export const Text1 = styled.p`
    ${heebo}
-   font-weight: 500;
+   font-weight: 400;
    font-size: 2.2rem;
    line-height: 160%;
    white-space: pre-line;
@@ -151,23 +154,6 @@ export const Text3 = styled.p`
    }
    @media ${mediaQuery.styledMobile} {
         font-size: 1.6rem;
-   }
-`
-
-export const Text4 = styled.p`
-   ${heebo}
-   font-weight: 400;
-   font-size: 2.4rem;
-   text-transform: uppercase;
-   line-height: 100%;
-   @media ${mediaQuery.styledTablet} {
-        font-size: 2.2rem;
-   }
-   @media ${mediaQuery.styledSmTablet} {
-        font-size: 2rem;
-   }
-   @media ${mediaQuery.styledMobile} {
-        font-size: 1.7rem;
    }
 `
 

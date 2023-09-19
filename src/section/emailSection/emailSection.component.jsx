@@ -12,7 +12,7 @@ const EmailSection = () => {
             <TextContainer>
                 <Typo type={TypoType.Text2} color='var(--color-cream)'>{t('emailText')}</Typo>
             </TextContainer>
-            <EmailBtn isPrimaryColor={true} >{t('sendEmail')}</EmailBtn>
+            <EmailBtn >{t('sendEmail')}</EmailBtn>
         </EmailContainer>
     )
 }
