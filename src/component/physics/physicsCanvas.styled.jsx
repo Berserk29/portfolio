@@ -7,7 +7,7 @@ export const FlexContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 5rem;
-    max-width: 1400px;
+    max-width: 1300px;
     padding: 10rem 0 16rem;
     @media ${mediaQuery.styledTablet} {
         flex-direction: column-reverse;
@@ -52,15 +52,15 @@ export const TextContainer = styled.div`
         border-bottom: 1px solid var(--color-primary);
     }
     &:hover ${TitleCss} {
-        transform: translateX(6rem);
+        transform: translateX(3rem);
         @media ${mediaQuery.styledMobile} {
-            transform: translateX(3.5rem);
+            transform: translateX(2rem);
         }
     }
     &:hover ${TextCss} {
-        transform: translateX(-6rem);
+        transform: translateX(-3rem);
         @media ${mediaQuery.styledMobile} {
-            transform: translateX(-3.5rem);
+            transform: translateX(-2rem);
         }
     }
 `

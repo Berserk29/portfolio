@@ -126,15 +126,15 @@ const Canvas = ({hoverNum}) => {
         context = canvasCur.getContext('2d')
 
         circleArr = canvasArr.map((el) => {
-            const {x, y, vx, vy, logo, color} = el;
-            return new Circle(context, x, y, vx, vy, logo, color)
+            const {x, y, vx, vy, logo, color, hoverColor} = el;
+            return new Circle(context, x, y, vx, vy, logo, color, hoverColor)
         }) 
 
         window.requestAnimationFrame(gameLoop)        
     },[canvasArr])
 
     return (
-        <canvas ref={canvasRef} id='myCanvas' width={!isTablet ? 600 : 700}  height={!isMobile ? 400 : 500}  style={{border: '1px solid var(--color-primary)'}}/>
+        <canvas ref={canvasRef} id='myCanvas' width={!isTablet ? 600 : 700}  height={!isMobile ? 440 : 500}  style={{border: '1px solid var(--color-primary)', borderRadius: '68px'}}/>
     )
 }
 
