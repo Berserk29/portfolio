@@ -120,10 +120,10 @@ export const Text1 = styled.p`
    line-height: 200%;
    white-space: pre-line;
    @media ${mediaQuery.styledTablet} {
-    font-size: 1.8rem ;
+    font-size: 1.8rem;
    }
    @media ${mediaQuery.styledSmTablet} {
-    font-size: 1.6rem ;
+    font-size: 1.6rem;
    }
 `
 

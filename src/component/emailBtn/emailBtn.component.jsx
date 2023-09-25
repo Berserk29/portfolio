@@ -1,4 +1,3 @@
-import Typo, { TypoType } from "../typo/typo.component";
 import { BtnContainer } from "./emailBtn.styled";
 
 const EmailBtn = ({children}) => {

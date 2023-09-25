@@ -6,13 +6,17 @@ export const FooterContainer = styled.footer`
     justify-content: space-between;
     align-items: flex-end;
     padding: 6.2rem 14.5rem;
-    color: var(--color-cream);
+    background-color: var(--color-cream);
     @media ${mediaQuery.styledTablet} {
         padding: 5rem 8rem;
     }
     @media ${mediaQuery.styledSmTablet} {
-        justify-content: center;
+        padding: 5rem;
+    }
+    @media ${mediaQuery.styledMobile} {
         align-items: center;
+        gap: 3rem;
+        flex-direction: column;
         padding: 4rem;
     }
 `
@@ -21,22 +25,22 @@ export const LinkContainer = styled.div`
     display: flex;
     gap: 4rem;
     margin-bottom: .8rem;
-    @media ${mediaQuery.styledSmTablet} {
+    @media ${mediaQuery.styledMobile} {
         width: 100%;
         max-width: 40rem;
-        justify-content: space-between;
+        justify-content: center;
         margin-bottom: 0;
-        margin-top: .8rem;
+        gap: 3.5rem;
     }
 `
 
 export const FlexContainer = styled.div`
     display: flex;
     justify-content: ${props => props.justify};
-    gap: 2rem;
+    gap: 1.6rem;
     width: 35.2rem;
-    @media ${mediaQuery.styledSmTablet} {
-        justify-content: center;
+    @media ${mediaQuery.styledTablet} {
+        width: 9.6rem;
     }
 `
 

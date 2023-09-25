@@ -6,7 +6,7 @@ export const EmailContainer = styled.section`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 6rem;
+    gap: 5.8rem;
     padding: 14.7rem 8rem 16rem;
     background-color: var(--color-primary);
     @media ${mediaQuery.styledTablet} {

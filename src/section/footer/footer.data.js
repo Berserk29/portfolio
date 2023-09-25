@@ -1,4 +1,6 @@
-import resumePath from '../../assets/resume/Olivier_Trudeau_resume.pdf'
+import resumePath from '../../assets/resume/Olivier_Trudeau_resume.pdf';
+import indeedIcon from '../../assets/icon/indeed-icon.png';
+import emailIcon from '../../assets/icon/email-icon.png';
 
 export const linkArr = [
     {
@@ -15,13 +17,15 @@ export const linkArr = [
     },
 ]
 
+// TODO Need to put my indeed account
+
 export const circleArr = [
     {
-        size: '4rem',
-        color: 'var(--color-primary)'
+        image: indeedIcon,
+        link: 'https://ca.indeed.com/',
     },
     {
-        size: '4rem',
-        color: 'var(--color-primary)'
+        image: emailIcon,
+        link: 'mailto:oliviertrudeau777@gmail.com',
     },
 ]
