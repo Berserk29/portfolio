@@ -6,12 +6,12 @@ export const marqueeArr = [
     },
     {
         isForward: false,
-        textArr: ['Front end', 'Portfolio', 'Developper', 'Olivier'],
+        textArr: ['Creative', 'Exploring', 'Olivier' , 'Potential'],
         isBlueArr: [true, false, true, false], 
     },
     {
         isForward: true,
-        textArr: ['Portfolio', 'Olivier', 'Front end' ,'Developper'],
+        textArr: ['Passionate', 'Interactive', 'Olivier' ,'Concepts'],
         isBlueArr: [false, true , false, true],
     },
 ]

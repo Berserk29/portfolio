@@ -16,14 +16,14 @@ export const TitleContainer = styled.div`
    align-items: center;
    justify-content: center;
 
-   padding: 3.8rem 8rem 2.1rem 8rem;
+     padding: 1.9rem 8rem;
    @media ${mediaQuery.styledTablet} {
-        padding: 2.75rem 6.5rem 1.7rem 6.5rem;
+        padding: 1.55rem 6.5rem
    }
    @media ${mediaQuery.styledSmTablet} {
-        padding: 2.6rem 5.4rem 1.4rem 5.4rem;
+        padding: 1.3rem 5.4rem;
    }
    @media ${mediaQuery.styledMobile} {
-        padding: 2.1rem 4.5rem 1.2rem 4.5rem;
+        padding: 1.05rem 4.5rem;
    }
 `

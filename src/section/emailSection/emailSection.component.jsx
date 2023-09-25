@@ -10,7 +10,7 @@ const EmailSection = () => {
         <EmailContainer>
             <Typo type={TypoType.Headline2} color='var(--color-cream)'>{t('getInTouch')}</Typo>
             <TextContainer>
-                <Typo type={TypoType.Text2} color='var(--color-cream)'>{t('emailText')}</Typo>
+                <Typo type={TypoType.Text1} color='var(--color-cream)'>{t('emailText')}</Typo>
             </TextContainer>
             <EmailBtn >{t('sendEmail')}</EmailBtn>
         </EmailContainer>

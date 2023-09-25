@@ -7,7 +7,7 @@ export const EmailContainer = styled.section`
     align-items: center;
     text-align: center;
     gap: 6rem;
-    padding: 16rem 8rem 12rem 8rem;
+    padding: 14.7rem 8rem 16rem;
     background-color: var(--color-primary);
     @media ${mediaQuery.styledTablet} {
         padding: 12rem 3rem;
@@ -23,5 +23,5 @@ export const EmailContainer = styled.section`
 `
 
 export const TextContainer = styled.div`
-    max-width: 71rem;
+    max-width: 56.5rem;
 `

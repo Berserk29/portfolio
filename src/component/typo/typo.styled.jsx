@@ -32,18 +32,23 @@ const bebasNeue = css`
 
 // INFO STYLED COMPONENT
 
+// line-height and margin-top --> to make the font upper and lower blank space equal
 export const Headline2 = styled.h2`
     ${teko}
-    line-height: 90%;
+    line-height: .82;
+    margin-top: 13px;
     font-weight: 600;
     font-size: 8rem;
     @media ${mediaQuery.styledTablet} {
+        margin-top: 11px;
         font-size: 6.5rem;
     }
     @media ${mediaQuery.styledSmTablet} {
+        margin-top: 9.5px;
         font-size: 5.6rem;
     }
     @media ${mediaQuery.styledMobile} {
+        margin-top: 7.5px;
         font-size: 4.5rem;
     }
 `
@@ -111,16 +116,13 @@ export const Headline5 = styled.h4`
 export const Text1 = styled.p`
    ${heebo}
    font-weight: 400;
-   font-size: 2.2rem;
-   line-height: 160%;
+   font-size: 2rem;
+   line-height: 200%;
    white-space: pre-line;
    @media ${mediaQuery.styledTablet} {
-    font-size: 2rem ;
-   }
-   @media ${mediaQuery.styledSmTablet} {
     font-size: 1.8rem ;
    }
-   @media ${mediaQuery.styledMobile} {
+   @media ${mediaQuery.styledSmTablet} {
     font-size: 1.6rem ;
    }
 `

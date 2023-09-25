@@ -8,7 +8,7 @@ export const FlexContainer = styled.div`
     align-items: center;
     gap: 5rem;
     max-width: 1300px;
-    padding: 10rem 0 16rem;
+    padding: 10.7rem 0 16rem;
     @media ${mediaQuery.styledTablet} {
         flex-direction: column-reverse;
         padding: 8rem 0 12rem;

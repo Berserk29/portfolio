@@ -73,7 +73,7 @@ export class Circle extends CanvasObject
         super(context, x, y, vx, vy);
 
         // Set default width
-        this.radius = 60;
+        this.radius = 58;
         this.color = color;
         this.hoverColor = hoverColor;
         this.iconUrl = iconUrl;

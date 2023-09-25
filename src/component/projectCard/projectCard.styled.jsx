@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const CardContainer = styled.div`
     transform-style: preserve-3d;
     width: 104.8rem;
-    height: 60rem;
+    height: 57rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
