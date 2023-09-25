@@ -31,8 +31,10 @@ export const Circle = styled.div`
 
 export const GiantHeadline = styled.span`
     ${khandBold}
-    font-size: 24.8rem;
+    font-size: 20rem;
     color: transparent;
+    line-height: 1;
+    margin-bottom: 5rem;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: ${props => props.borderColor || 'var(--color-cream)'};
 `

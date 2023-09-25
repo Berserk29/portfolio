@@ -21,6 +21,11 @@ const cssButton = css`
         height: 4.8rem;
         font-size: 2.25rem;
     }
+    @media ${mediaQuery.styledMobile} {
+        width: 4.5rem;
+        height: 3.6rem;
+        font-size: 1.7rem;
+    }
 `
 
 export const ButtonContainer = styled.div`
@@ -30,8 +35,8 @@ export const ButtonContainer = styled.div`
     right: 5vw;
     display: flex;
     flex-direction: column;
-    opacity: 0; 
-    animation: ${opacityAni} .8s ease 3.4s forwards;
+    /* opacity: 0;  */
+    /* animation: ${opacityAni} .8s ease 3.4s forwards; */
     @media ${mediaQuery.styledTablet} {
         top: var(--top-tablet);
     }
@@ -49,6 +54,9 @@ export const LowerContainer = styled.div`
     gap: 0.6rem;
     transition: all .3s;
     margin-top: 1rem;
+    @media ${mediaQuery.styledMobile} {
+        margin-top: .5rem;
+    }
 `
 
 export const ButtonCssActive = styled.button`
