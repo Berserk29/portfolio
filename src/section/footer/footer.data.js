@@ -18,12 +18,10 @@ export const linkArr = [
     },
 ]
 
-// TODO Need to put my linkdedin account
-
 export const circleArr = [
     {
         image: indeedIcon,
-        link: 'https://www.linkedin.com/',
+        link: 'https://www.linkedin.com/in/olivier-trudeau-05444a293/',
     },
     {
         image: githubIcon,
