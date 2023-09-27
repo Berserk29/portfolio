@@ -134,7 +134,13 @@ const Canvas = ({hoverNum}) => {
     },[canvasArr])
 
     return (
-        <canvas ref={canvasRef} id='myCanvas' width={!isTablet ? 600 : 700}  height={!isMobile ? 440 : 500}  style={{border: '1px solid var(--color-primary)', borderRadius: '68px'}}/>
+        <canvas 
+            ref={canvasRef}
+            id='myCanvas'
+            width={!isTablet ? 600 : 700}
+            height={!isMobile ? 440 : 500}
+            style={{border: '1px solid var(--color-primary)', borderRadius: !isMobile ? '68px' : '40px'}}
+        />
     )
 }
 

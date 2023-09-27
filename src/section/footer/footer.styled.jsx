@@ -25,6 +25,9 @@ export const LinkContainer = styled.div`
     display: flex;
     gap: 4rem;
     margin-bottom: .8rem;
+    @media ${mediaQuery.styledSmTablet} {
+        gap: 2rem;
+    }
     @media ${mediaQuery.styledMobile} {
         width: 100%;
         max-width: 40rem;
@@ -40,7 +43,7 @@ export const FlexContainer = styled.div`
     gap: 1.6rem;
     width: 35.2rem;
     @media ${mediaQuery.styledTablet} {
-        width: 9.6rem;
+        width: auto;
     }
 `
 

@@ -9,6 +9,10 @@ export const CircleContainer = styled.a`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: background-color .3s;
+    :hover {
+        background-color: var(--color-primary-hover);
+    }
 `
 
 export const IconCss = styled.img`
