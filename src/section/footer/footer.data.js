@@ -21,7 +21,7 @@ export const linkArr = [
 export const circleArr = [
     {
         image: indeedIcon,
-        link: 'https://www.linkedin.com/in/olivier-trudeau-05444a293/',
+        link: 'https://www.linkedin.com/in/olivier-trudeau/',
     },
     {
         image: githubIcon,
