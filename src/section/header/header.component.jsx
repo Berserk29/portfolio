@@ -10,7 +10,7 @@ import {
 import HeaderName from "../../component/headerName/headerName.component";
 import HeaderMarquee from "../../component/headerMarquee/headerMarquee.component";
 import ButtonLng from "../../component/buttonLng/buttonLng.component";
-import headingImg from "../../assets/image/header_img.jpg"
+import headingImg from "../../assets/image/header-img.jpg"
 
 
 const Header = () => {

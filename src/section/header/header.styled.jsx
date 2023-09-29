@@ -5,9 +5,9 @@ import mediaQuery from "../../helper/mediaQuery";
 // CSS
 const sameCss = css`
     border-radius: 300px;
-    height: 50rem;
+    height: 52rem;
     max-height: 65vh;
-    aspect-ratio: 1.65 / 1;
+    aspect-ratio: 1.58 / 1;
     @media ${mediaQuery.styledTablet} {
         aspect-ratio: 1.25 / 1;
         height: 45rem;
