@@ -1,4 +1,3 @@
-import resumePath from '../../assets/resume/Olivier_Trudeau_resume.pdf';
 import indeedIcon from '../../assets/icon/indeed-icon.png';
 import emailIcon from '../../assets/icon/email-icon.png';
 import githubIcon from '../../assets/icon/github-icon.png'
@@ -10,7 +9,7 @@ export const linkArr = [
     },
     {
         text: 'resume',
-        link: resumePath
+        link: '',
     },
     {
         text: 'about',

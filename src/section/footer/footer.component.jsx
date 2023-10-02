@@ -8,12 +8,13 @@ import Typo, { TypoType } from "../../component/typo/typo.component";
 
 import { FooterContainer, LinkContainer, FlexContainer, ResumeLink } from "./footer.styled";
 import { circleArr, linkArr } from "./footer.data";
-import resumePath from '../../assets/resume/Olivier_Trudeau_resume.pdf'
+
+import resumeEn from '../../assets/resume/Olivier_Trudeau_resume.pdf'
+import resumeFr from '../../assets/resume/Olivier_Trudeau_CV.pdf'
 
 const Footer = forwardRef(({props},ref) => {
-    const {t} = useTranslation()
+    const {t, i18n} = useTranslation()
     const isTablet = useMediaQuery(mediaQuery.useTablet)
-    const isSmTablet = useMediaQuery(mediaQuery.useSmTablet)
 
     const scrollToHandler = (ref) => {
         if(ref && ref.current)
@@ -30,7 +31,7 @@ const Footer = forwardRef(({props},ref) => {
             <LinkContainer>
                     {linkArr.map((el,i) => (
                         el.text === 'resume' ? (
-                            <ResumeLink key={i} href={resumePath} download>
+                            <ResumeLink key={i} href={i18n?.language === 'en' ? resumeEn : resumeFr} download>
                                 <Typo type={TypoType.Text5} color="var(--color-grey)" >{t(el.text)}</Typo>
                             </ResumeLink>
                         ) : (
