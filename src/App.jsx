@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Header/>
+      <Header />
       <AboutSection ref={aboutRef}/>
       <ProjectSection ref={projectRef}/>
       <SkillSection />
