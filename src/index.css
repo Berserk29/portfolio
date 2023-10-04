@@ -80,6 +80,8 @@ html {
   font-size: 62.5%;
 }
 
+
+
 #myCanvas {
 
   @media (max-width: 800px) {
