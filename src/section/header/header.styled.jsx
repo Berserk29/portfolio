@@ -52,7 +52,7 @@ export const ContainerBelow = styled.header`
     width: 100%;
     height: 100vh;
     background-color: var(--color-primary);
-    animation: ${props => props.startAnimation ? css`${purpleAni} .1s 1.3s forwards` : 'none' };
+    animation: ${props => props.startAnimation ? css`${purpleAni} .3s 1.3s forwards` : 'none' };
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@ export const ContainerBelow = styled.header`
 export const HeaderImg = styled.img`
     ${sameCss}
     opacity: 0;
-    animation: ${props => props.startAnimation ? css`${pictureAni} 2s .75s forwards, ${opaAni} .1s .75s forwards` : 'none' };
+    animation: ${props => props.startAnimation ? css`${pictureAni} 2s .75s forwards, ${opaAni} .4s .75s forwards` : 'none' };
     z-index: 2;
     cursor: pointer;
     object-fit: cover;

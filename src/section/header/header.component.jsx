@@ -23,19 +23,23 @@ const Header = () => {
     const wait = (second, setState) => setTimeout(() => setState(true), second * 1000)
 
     useEffect(() => {
+        let initialDelayTimer;
         let timeout;
-        const image = new Image()
-        image.src = headingImg;
-        image.onload = () => setImageLoad(true)
 
-
-        // after the image is fully loaded --> timer to stop display the top container
-        if(imageLoad) {
-          timeout = wait(3, setDisplayOff)
-        }
+        initialDelayTimer = setTimeout(() => {
+            const image = new Image()
+            image.src = headingImg;
+            image.onload = () => setImageLoad(true)
+    
+            // after the image is fully loaded --> timer to stop display the top container
+            if(imageLoad) {
+              timeout = wait(3, setDisplayOff)
+            }
+        }, 1000) // Add 1 second to the initial delay
 
         return () => {
             if(timeout) clearTimeout(timeout)
+            if(initialDelayTimer) clearTimeout(initialDelayTimer)
         }
 
     }, [imageLoad])
