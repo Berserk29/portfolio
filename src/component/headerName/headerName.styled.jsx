@@ -1,6 +1,10 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { letterAni, nameAnimation, letterCircleAni} from "../../helper/keyframe";
 import mediaQuery from "../../helper/mediaQuery";
+
+const animationCss = (translate, size) => css`
+    animation: ${props => props.startAnimation ? css`${nameAnimation(translate, size)} 0.5s 2.1s forwards` : 'none'};
+`;
 
 export const NameContainer = styled.div`
     position: absolute;
@@ -9,22 +13,22 @@ export const NameContainer = styled.div`
     left: 50%;
     z-index: 10;
     transform: translate(-50%, 42vh) scale(1.3); 
-    animation: ${nameAnimation} .5s forwards 2.9s;
+    animation: ${props => props.startAnimation ? css`${nameAnimation} 0.5s 2.1s forwards` : 'none'};
     @media ${mediaQuery.styledTablet} {
         top: var(--top-tablet);
         width: 15.7rem;
         transform: translate(-50%, 40vh) scale(1.2);
-        animation: ${nameAnimation('40vh', 1.2)} .5s forwards 2.9s;
+        ${animationCss('40vh', 1.2)}
     }
     @media ${mediaQuery.styledSmTablet} {
         top: var(--top-smTablet);
         transform: translate(-50%, 38vh) scale(0.8);
-        animation: ${nameAnimation('38vh', 0.8)} .5s forwards 2.9s;
+        ${animationCss('38vh', 0.8)}
     }
     @media ${mediaQuery.styledMobile} {
-        transform: translate(-50%, 36vh) scale(0.8);
-        animation: ${nameAnimation('36vh', 0.8)} .5s forwards 2.9s;
         top: var(--top-mobile);
+        transform: translate(-50%, 36vh) scale(0.8);
+        ${animationCss('36vh', 0.8)}
     }
 `
 
@@ -41,8 +45,7 @@ export const LetterSpan = styled.span`
     color: white;
     text-transform: uppercase;
     transform: translateY(100%);
-    animation: ${letterAni} 1.6s forwards ${props => props.cubic};
-    animation-delay: 1.8s;
+    animation: ${ props => props.startAnimation ? css`${letterAni} 1.6s .9s forwards ${props => props.cubic}` : 'none' };
     :first-child{
         padding-left: .8rem;
     }
@@ -63,7 +66,6 @@ export const LetterSpanAfter = styled(LetterSpan)`
         height: 1.42rem;
         border-radius: 50%;
         background-color: white;
-        animation: ${letterCircleAni} .4s forwards;
-        animation-delay: 2.9s;
+        animation: ${ props => props.startAnimation ? css`${letterCircleAni} .4s 2.2s forwards` : 'none' };
     }
 `

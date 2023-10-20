@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import { pictureAni, circleAni, circleAniMobile } from "../../helper/keyframe";
+import { pictureAni, circleAni, circleAniMobile, purpleAni, opaAni } from "../../helper/keyframe";
 import mediaQuery from "../../helper/mediaQuery";
 
 // CSS
@@ -40,10 +40,10 @@ export const AnimationContainer = styled.div`
     background-color: transparent;
     box-shadow: var(--box-shadow-start);
     opacity: 0;
-    animation: ${circleAni} 2s 1.5s;
+    animation: ${props => props.startAnimation ? css`${circleAni} 2s .75s forwards` : 'none' };
     @media ${mediaQuery.styledMobile} {
         box-shadow: var(--box-shadow-start-mobile);
-        animation: ${circleAniMobile} 2s 1.5s;
+        animation: ${props => props.startAnimation ? css`${circleAniMobile} 2s .75s forwards` : 'none' };
     }
 `
 
@@ -51,7 +51,8 @@ export const ContainerBelow = styled.header`
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: ${props => props.changeColor ? 'var(--color-cream)' : 'var(--color-primary)' };
+    background-color: var(--color-primary);
+    animation: ${props => props.startAnimation ? css`${purpleAni} .1s 1.3s forwards` : 'none' };
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,9 +61,8 @@ export const ContainerBelow = styled.header`
 
 export const HeaderImg = styled.img`
     ${sameCss}
-    opacity: ${props => props.endAni ? 1 : 0};
-    animation: ${pictureAni} 2s forwards;
-    animation-delay: 1.5s;
+    opacity: 0;
+    animation: ${props => props.startAnimation ? css`${pictureAni} 2s .75s forwards, ${opaAni} .1s .75s forwards` : 'none' };
     z-index: 2;
     cursor: pointer;
     object-fit: cover;

@@ -36,7 +36,7 @@ export const ButtonContainer = styled.div`
     display: flex;
     flex-direction: column;
     opacity: 0; 
-    animation: ${opacityAni} .8s ease 3.4s forwards;
+    animation: ${props => props.startAnimation ? css`${opacityAni} 0.8s 3s forwards` : 'none'};
     @media ${mediaQuery.styledTablet} {
         top: var(--top-tablet);
     }

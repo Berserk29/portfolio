@@ -5,7 +5,7 @@ import { ButtonCss, ButtonContainer, ButtonCssActive, LowerContainer } from "./b
 import { initialLng, lngArr } from "../../helper/i18next";
 
 
-const ButtonLng = () => {
+const ButtonLng = ({startAnimation}) => {
     const [activeLng, setActiveLng] = useState(initialLng)
     const [showBtn, setShowBtn] = useState(false)
     const {i18n} = useTranslation()
@@ -30,7 +30,7 @@ const ButtonLng = () => {
     } 
 
     return (
-        <ButtonContainer>
+        <ButtonContainer startAnimation={startAnimation}>
             <ButtonCssActive 
                 onMouseEnter={mouseEnterHandler} 
                 onMouseLeave={mouseLeaveHandler}

@@ -11,18 +11,34 @@ import HeaderName from "../../component/headerName/headerName.component";
 import HeaderMarquee from "../../component/headerMarquee/headerMarquee.component";
 import ButtonLng from "../../component/buttonLng/buttonLng.component";
 import headingImg from "../../assets/image/header-img.jpg"
+import headingImgMedium from "../../assets/image/header-img-1200.jpg"
+import headingImgSmall from "../../assets/image/header-img-800.jpg"
+import headingImgSmallest from "../../assets/image/header-img-800.jpg"
 
 
 const Header = () => {
-    const [animationOn, setAnimationOn] = useState(false)
-    const [endAnimation, setEndAnimation] = useState(false)
+    const [imageLoad, setImageLoad] = useState(false)
+    const [displayOff, setDisplayOff] = useState(false)
     
     const wait = (second, setState) => setTimeout(() => setState(true), second * 1000)
 
     useEffect(() => {
-        wait(2.9, setAnimationOn)
-        wait(3.5, setEndAnimation)
-    }, [])
+        let timeout;
+        const image = new Image()
+        image.src = headingImg;
+        image.onload = () => setImageLoad(true)
+
+
+        // after the image is fully loaded --> timer to stop display the top container
+        if(imageLoad) {
+          timeout = wait(3, setDisplayOff)
+        }
+
+        return () => {
+            if(timeout) clearTimeout(timeout)
+        }
+
+    }, [imageLoad])
 
     useEffect(() => {
         const preventDefault = event => event.preventDefault();
@@ -38,15 +54,20 @@ const Header = () => {
             window.removeEventListener('touchmove', preventDefault)
             window.removeEventListener('keydown', preventDefault)
         }, 2900)
+
     },[])
 
     return (
-        <> 
-            { !endAnimation ? <Container><AnimationContainer/></Container> : null }
-            <ContainerBelow changeColor={animationOn} >
-                <ButtonLng />
-                <HeaderName/>
-                <HeaderImg src={headingImg} endAni={endAnimation} />
+        <>  
+            <Container style={{display: displayOff && 'none'}}><AnimationContainer startAnimation={imageLoad}/></Container>
+            <ContainerBelow startAnimation={imageLoad}>
+                <ButtonLng  startAnimation={imageLoad}/>
+                <HeaderName startAnimation={imageLoad}/>
+                <HeaderImg 
+                    startAnimation={imageLoad} 
+                    src={headingImg} 
+                    srcSet={`${headingImgSmallest} 600w ,${headingImgSmall} 800w ,${headingImgMedium} 1200w ,${headingImg} 1600w`}
+                />
                 <HeaderMarquee />
             </ContainerBelow>
         </>

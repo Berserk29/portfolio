@@ -61,7 +61,7 @@ export const circleAniMobile = keyframes`
     }
 `
 
-export const nameAnimation = (translate = '42vh' ,scale = 1.3) => keyframes`
+export const nameAnimation = (translate = '42vh' , scale = 1.3) => keyframes`
     0% { 
         transform: translate(-50%, translate) scale(scale);
     }
@@ -75,7 +75,7 @@ export const letterAni = keyframes`
         color: white;
         transform: translateY(100%)
     }
-    62.5%, 68.75%{
+    62.5%, 73%{
         color: white;
         transform: translateY(0);
     }
@@ -88,16 +88,6 @@ export const letterAni = keyframes`
 export const letterCircleAni = keyframes`
     from { background-color: white; }
     to { background-color: var(--color-primary); }
-`
-
-export const starAni = keyframes`
-    0%, 10% { opacity: 1;}
-    15% { opacity: 0.5;}
-    25%,40% { opacity: 1;}
-    45% { opacity: 0.3;}
-    55%,80% { opacity: 1;}
-    85% { opacity: 0.2;}
-    90%,100% {opacity: 1;}
 `
 
 export const infiniteAniBackward = keyframes`
@@ -114,3 +104,12 @@ export const opacityAni = keyframes`
     from {opacity: 0;}
     to {opacity: 1;}
 `
+
+export const purpleAni = keyframes`
+    100% { background-color: var(--color-cream);}
+`
+
+export const opaAni = keyframes`
+    100% { opacity: 1 }
+`
+
