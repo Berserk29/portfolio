@@ -33,13 +33,13 @@ const Header = () => {
     
             // after the image is fully loaded --> timer to stop display the top container
             if(imageLoad) {
-              timeout = wait(3, setDisplayOff)
+              timeout = wait(2, setDisplayOff)
             }
         }, 1000) // Add 1 second to the initial delay
 
         return () => {
-            if(timeout) clearTimeout(timeout)
             if(initialDelayTimer) clearTimeout(initialDelayTimer)
+            if(timeout) clearTimeout(timeout)
         }
 
     }, [imageLoad])

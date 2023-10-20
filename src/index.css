@@ -28,10 +28,10 @@
   --box-shadow-start:
   0 0 0 160px var(--color-primary),
   0 0 0 165px var(--color-cream),
-  0 0 0 225px var(--color-primary),
-  0 0 0 230px var(--color-cream-opa50),
-  0 0 0 290px var(--color-primary),
-  0 0 0 295px var(--color-cream-opa10),
+  0 0 0 245px var(--color-primary),
+  0 0 0 250px var(--color-cream-opa50),
+  0 0 0 310px var(--color-primary),
+  0 0 0 315px var(--color-cream-opa10),
   0 0 0 3000px var(--color-primary);
    
   --box-shadow-full:
@@ -44,21 +44,21 @@
   0 0 0 3000px var(--color-primary);
 
   --box-shadow-start-mobile:
-  0 0 0 130px var(--color-primary),
-  0 0 0 135px var(--color-cream),
-  0 0 0 195px var(--color-primary),
-  0 0 0 200px var(--color-cream-opa50),
-  0 0 0 260px var(--color-primary),
-  0 0 0 265px var(--color-cream-opa10),
+  0 0 0 100px var(--color-primary),
+  0 0 0 105px var(--color-cream),
+  0 0 0 165px var(--color-primary),
+  0 0 0 170px var(--color-cream-opa50),
+  0 0 0 230px var(--color-primary),
+  0 0 0 235px var(--color-cream-opa10),
   0 0 0 3000px var(--color-primary);
   
   --box-shadow-full-mobile:
   0 0 0 30px var(--color-primary),
   0 0 0 35px var(--color-cream),
-  0 0 0 95px var(--color-primary),
-  0 0 0 100px var(--color-cream-opa50),
-  0 0 0 160px var(--color-primary),
-  0 0 0 165px var(--color-cream-opa10),
+  0 0 0 75px var(--color-primary),
+  0 0 0 80px var(--color-cream-opa50),
+  0 0 0 120px var(--color-primary),
+  0 0 0 125px var(--color-cream-opa10),
   0 0 0 3000px var(--color-primary);
 
 }

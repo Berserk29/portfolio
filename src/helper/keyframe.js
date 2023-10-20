@@ -57,7 +57,7 @@ export const circleAniMobile = keyframes`
     100% {
         box-shadow: var(--box-shadow-full-mobile);
         opacity: 1;
-        transform: scale(3);
+        transform: scale(3.5);
     }
 `
 

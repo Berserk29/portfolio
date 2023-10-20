@@ -41,7 +41,7 @@ export const AnimationContainer = styled.div`
     box-shadow: var(--box-shadow-start);
     opacity: 0;
     animation: ${props => props.startAnimation ? css`${circleAni} 2s .75s forwards` : 'none' };
-    @media ${mediaQuery.styledMobile} {
+    @media ${mediaQuery.styledSmTablet} {
         box-shadow: var(--box-shadow-start-mobile);
         animation: ${props => props.startAnimation ? css`${circleAniMobile} 2s .75s forwards` : 'none' };
     }
