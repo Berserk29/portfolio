@@ -23,7 +23,7 @@ export const TextContainer = styled.div`
 export const Circle = styled.div`
     width: 4.6rem;
     height: 4.6rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 6rem;
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid ${props => props.color || 'var(--color-cream)'};
